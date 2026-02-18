@@ -15,11 +15,7 @@ venv/
 # Secrets
 secrets/
 
-# Data artifacts
-data/interim/
-data/processed/
-*.parquet
-*.feather
+
 
 # Models
 models/
