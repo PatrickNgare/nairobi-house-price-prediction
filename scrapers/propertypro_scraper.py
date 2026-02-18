@@ -1,126 +1,127 @@
 # scrapers/propertypro_scraper.py
 from bs4 import BeautifulSoup
-from typing import Dict, List, Optional
-from datetime import datetime
 import re
+from datetime import datetime
 from .base_scraper import BaseScraper
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config.locations import ALL_AREAS
+from utils.helpers import clean_price, generate_id
 
 class PropertyProScraper(BaseScraper):
-    def __init__(self, delay: float = 3):
+    def __init__(self):
         super().__init__(
-            source_name="PropertyPro",
-            base_url="https://propertypro.co.ke",
-            delay=delay
+            name="PropertyPro",
+            base_url="https://propertypro.co.ke"
         )
     
-    def get_page_url(self, page: int) -> str:
-        """Get URL for a specific page"""
-        return f"{self.base_url}/properties-for-sale/nairobi?page={page}"
+    def get_page_url(self, page):
+        return f"{self.base_url}/properties-for-sale?page={page}"
     
-    def scrape_page(self, url: str) -> List[Dict]:
-        """Scrape a single page of listings"""
-        response = self._make_request(url)
-        if not response:
-            return []
-        
-        soup = BeautifulSoup(response.content, 'lxml')
-        listings = []
-        
-        # Find all property cards
-        property_cards = soup.find_all('div', class_=re.compile(r'property-item|card|listing'))
-        
-        self.logger.info(f"Found {len(property_cards)} potential listings")
-        
-        for card in property_cards:
-            try:
-                listing = self.parse_listing_card(card)
-                if listing and self.validate_listing(listing):
-                    listings.append(listing)
-                    self.stats['listings_parsed'] += 1
-            except Exception as e:
-                self.logger.error(f"Error parsing listing: {str(e)}")
-                self.stats['errors'] += 1
-        
-        return listings
-    
-    def parse_listing_card(self, card) -> Optional[Dict]:
-        """Parse a single listing card"""
-        
-        # Extract title
-        title_elem = card.find(['h4', 'h5', 'h6'], class_=re.compile(r'title|property-name|heading'))
-        title = title_elem.text.strip() if title_elem else ""
-        
-        # Extract location
-        location_elem = card.find(['div', 'p'], class_=re.compile(r'location|address|neighborhood'))
-        location_text = location_elem.text.strip() if location_elem else ""
-        
-        # Extract price
-        price_elem = card.find('div', class_=re.compile(r'price|cost|amount'))
-        price_text = price_elem.text.strip() if price_elem else ""
-        price_kes = self.parse_price(price_text)
-        
-        # Skip if no price
-        if not price_kes:
+    def parse_listing(self, price_element, soup):
+        """Parse a listing from price element with robust container search and fully improved extraction"""
+        try:
+            container = price_element.parent
+            for _ in range(5):
+                if container and (container.find(['h3', 'h4', 'h5']) or 'PID' in str(container)):
+                    break
+                if container:
+                    container = container.parent
+            if not container:
+                print("  ⚠️ PropertyPro: No container found for price element")
+                return None
+            container_text = container.get_text(separator=" ", strip=True)
+            # Extract price
+            price = clean_price(str(price_element))
+            if not price:
+                print("  ⚠️ PropertyPro: No price found")
+                return None
+            # Extract PID
+            pid_match = re.search(r'PID\s*:?\s*([A-Z0-9]+)', container_text)
+            pid = pid_match.group(1) if pid_match else generate_id(container_text[:50])
+            # Extract title
+            title_elem = container.find(['h3', 'h4', 'h5'])
+            title = title_elem.get_text(strip=True) if title_elem else f"Property {pid}" if pid else "No title"
+            # Robust location extraction
+            location = None
+            for area in ALL_AREAS:
+                area_norm = area.replace('-', ' ').lower()
+                if re.search(rf'\b{area_norm}\b', container_text.lower()):
+                    location = area.title().replace('-', ' ')
+                    break
+            if not location:
+                # Try to extract from address patterns
+                loc_match = re.search(r'Location\s*:?\s*([A-Za-z\s\-]+)', container_text)
+                if loc_match:
+                    location = loc_match.group(1).strip().title()
+                else:
+                    # Try to extract from common Nairobi neighborhoods
+                    nairobi_keywords = ['Nairobi', 'Westlands', 'Kilimani', 'Kileleshwa', 'Lavington', 'Karen', 'Runda', 'Parklands', 'Langata', 'Hurlingham', 'Buruburu', 'Donholm', 'Komarock', 'Embakasi', 'Kasarani', 'Roysambu', 'Zimmerman', 'Githurai', 'Ruiru', 'Juja', 'Ongata Rongai', 'Ngong', 'Syokimau', 'Kitengela', 'Athiriver', 'Machakos', 'Thika', 'Limuru', 'Kiambu', 'Kikuyu']
+                    for kw in nairobi_keywords:
+                        if re.search(rf'\b{kw.lower()}\b', container_text.lower()):
+                            location = kw
+                            break
+                    if not location:
+                        location = "Nairobi"
+            # Improved bedrooms extraction
+            bedrooms = 0
+            bed_match = re.search(r'(\d+)\s*(?:Beds?|Bedrooms?|Bed)', container_text, re.IGNORECASE)
+            if bed_match:
+                bedrooms = int(bed_match.group(1))
+            # Improved bathrooms extraction
+            bathrooms = 0
+            bath_match = re.search(r'(\d+)\s*(?:Baths?|Bathrooms?|Bath)', container_text, re.IGNORECASE)
+            if bath_match:
+                bathrooms = int(bath_match.group(1))
+            # Improved size extraction
+            size_sqft = None
+            size_match = re.search(r'(\d+[.,]?\d*)\s*(?:m²|sqm|m2|sqft|sq ft)', container_text, re.IGNORECASE)
+            if size_match:
+                try:
+                    size_val = float(size_match.group(1).replace(',', '.'))
+                    if re.search(r'm²|sqm|m2', container_text, re.IGNORECASE):
+                        size_sqft = round(size_val * 10.764, 2)
+                    else:
+                        size_sqft = size_val
+                except Exception:
+                    size_sqft = None
+            # Fully improved property type classification
+            property_type = "Unknown"
+            type_keywords = {
+                'apartment': 'Apartment', 'flat': 'Apartment', 'studio': 'Apartment', 'penthouse': 'Apartment',
+                'house': 'House', 'villa': 'Villa', 'bungalow': 'Bungalow', 'maisonette': 'Maisonette', 'townhouse': 'Townhouse', 'duplex': 'Maisonette',
+                'land': 'Land', 'plot': 'Land', 'commercial': 'Commercial', 'office': 'Commercial', 'shop': 'Commercial', 'godown': 'Commercial', 'warehouse': 'Commercial', 'retail': 'Commercial', 'hotel': 'Commercial', 'guesthouse': 'Commercial', 'bed & breakfast': 'Commercial', 'hostel': 'Commercial'
+            }
+            for keyword, ptype in type_keywords.items():
+                if re.search(rf'\b{keyword}\b', container_text.lower()):
+                    property_type = ptype
+                    break
+            # Fully expanded amenities extraction
+            amenities = []
+            amenity_keywords = ['pool', 'gym', 'parking', 'security', 'garden', 'cctv', 'fence', 'backup generator', 'internet', 'balcony', 'furnished', 'playground', 'clubhouse', 'ac', 'borehole', 'sauna', 'tennis', 'lift', 'generator', 'water', 'wifi', 'fireplace', 'laundry', 'pet', 'solar', 'alarm', 'intercom', 'air conditioning', 'spa', 'restaurant', 'bar', 'roof terrace', 'conference', 'kids area', 'smart home', 'walk-in closet', 'pantry', 'servant quarters', 'dsq', 'study', 'office', 'shop', 'store', 'garage', 'carport', 'shower', 'bathtub', 'jacuzzi', 'steam', 'terrace', 'patio', 'veranda', 'garden shed', 'gazebo', 'bbq', 'basketball', 'football', 'golf', 'squash', 'tennis court', 'play area', 'library', 'cinema', 'games room', 'music room', 'art studio', 'workshop', 'storage', 'safe', 'vault', 'wine cellar', 'cellar', 'basement', 'attic', 'loft', 'mezzanine', 'rooftop', 'sky lounge', 'sky garden', 'sky pool', 'sky gym', 'sky bar', 'sky restaurant', 'sky terrace', 'sky deck', 'sky office', 'sky shop', 'sky store', 'sky parking', 'sky security', 'sky garden', 'sky playground', 'sky clubhouse', 'sky ac', 'sky borehole', 'sky sauna', 'sky tennis', 'sky lift', 'sky generator', 'sky water', 'sky wifi', 'sky fireplace', 'sky laundry', 'sky pet', 'sky solar', 'sky alarm', 'sky intercom']
+            for amenity in amenity_keywords:
+                if re.search(rf'\b{amenity}\b', container_text.lower()):
+                    amenities.append(amenity)
+            # Get URL
+            url = f"{self.base_url}/property/{pid}" if pid else ""
+            # Debug logging
+            print(f"  🏷️ Parsed PropertyPro: PID={pid}, Title={title}, Location={location}, Price={price}, Bedrooms={bedrooms}, Bathrooms={bathrooms}, Size={size_sqft}, Type={property_type}, Amenities={amenities}, URL={url}")
+            return {
+                'source': self.name,
+                'listing_id': pid,
+                'title': title[:200],
+                'location': location,
+                'property_type': property_type,
+                'bedrooms': bedrooms,
+                'bathrooms': bathrooms,
+                'size_sqft': size_sqft,
+                'price_kes': price,
+                'amenities': '|'.join(amenities) if amenities else None,
+                'listing_url': url,
+                'scrape_date': datetime.now().strftime('%Y-%m-%d')
+            }
+        except Exception as e:
+            print(f"  ❌ PropertyPro: Exception in parse_listing - {str(e)}")
             return None
-        
-        # Get card text for feature extraction
-        card_text = card.get_text().lower()
-        
-        # Extract bedrooms, bathrooms, size from details section
-        details = card.find_all('span', class_=re.compile(r'detail|feature|spec'))
-        
-        bedrooms = None
-        bathrooms = None
-        size_sqft = None
-        
-        for detail in details:
-            detail_text = detail.text.lower()
-            if 'bed' in detail_text:
-                bedrooms = self.parse_bedrooms(detail_text)
-            elif 'bath' in detail_text:
-                bathrooms = self.parse_bathrooms(detail_text)
-            elif 'sq' in detail_text or 'm²' in detail_text:
-                size_sqft = self.parse_size(detail_text)
-        
-        # If not found in details, try the full text
-        if not bedrooms:
-            bedrooms = self.parse_bedrooms(card_text)
-        if not bathrooms:
-            bathrooms = self.parse_bathrooms(card_text)
-        if not size_sqft:
-            size_elem = card.find(['div', 'span'], string=re.compile(r'\d+\s*(sq|m²)', re.I))
-            if size_elem:
-                size_sqft = self.parse_size(size_elem.text)
-        
-        # Extract amenities
-        amenities = self.extract_amenities(card_text)
-        
-        # Get listing URL
-        link_elem = card.find('a', href=True)
-        listing_url = f"{self.base_url}{link_elem['href']}" if link_elem and link_elem['href'].startswith('/') else (
-            link_elem['href'] if link_elem else ""
-        )
-        
-        # Determine property type
-        property_type = "Unknown"
-        title_lower = title.lower()
-        for ptype in ['apartment', 'house', 'villa', 'bungalow', 'maisonette', 'townhouse', 'land', 'commercial']:
-            if ptype in title_lower:
-                property_type = ptype.capitalize()
-                break
-        
-        return {
-            'listing_id': self.generate_listing_id(listing_url),
-            'source': self.source_name,
-            'title': title,
-            'location': self.standardize_location(location_text),
-            'property_type': property_type,
-            'bedrooms': bedrooms,
-            'bathrooms': bathrooms,
-            'size_sqft': size_sqft,
-            'price_kes': price_kes,
-            'amenities': '|'.join(amenities) if amenities else '',
-            'listing_date': datetime.now().strftime('%Y-%m-%d'),
-            'listing_url': listing_url,
-            'scraped_at': datetime.now().isoformat()
-        }

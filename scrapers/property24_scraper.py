@@ -1,112 +1,210 @@
-# scrapers/property24_scraper.py
+# scrapers/property24_selenium_scraper.py
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
-from typing import Dict, List, Optional
-from datetime import datetime
+import time
 import re
-from .base_scraper import BaseScraper
+from datetime import datetime
+import logging
 
-class Property24Scraper(BaseScraper):
-    def __init__(self, delay: float = 3):
-        super().__init__(
-            source_name="Property24",
-            base_url="https://www.property24.co.ke",
-            delay=delay
+class Property24SeleniumScraper:
+    def __init__(self, delay: int = 3):
+        self.source_name = "Property24"
+        self.base_url = "https://www.property24.co.ke"
+        self.delay = delay
+        self.logger = logging.getLogger("Property24Selenium")
+        
+        # Set up Chrome options
+        options = webdriver.ChromeOptions()
+        options.add_argument('--headless')  # Run in background
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-blink-features=AutomationControlled')
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        
+        self.driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install()),
+            options=options
         )
+        self.wait = WebDriverWait(self.driver, 10)
     
-    def get_page_url(self, page: int) -> str:
-        """Get URL for a specific page"""
-        return f"{self.base_url}/for-sale/nairobi/{page}"
-    
-    def scrape_page(self, url: str) -> List[Dict]:
-        """Scrape a single page of listings"""
-        response = self._make_request(url)
-        if not response:
-            return []
+    def scrape(self, max_pages: int = 3):
+        """Main scraping method using Selenium"""
+        all_listings = []
         
-        soup = BeautifulSoup(response.content, 'lxml')
-        listings = []
-        
-        # Find all property cards - Property24 uses specific classes
-        property_cards = soup.find_all('div', class_=re.compile(r'p24_content|propertyListing'))
-        
-        self.logger.info(f"Found {len(property_cards)} potential listings")
-        
-        for card in property_cards:
+        try:
+            # Go to the for-sale page
+            self.logger.info("Loading Property24 for-sale page...")
+            self.driver.get(f"{self.base_url}/for-sale")
+            time.sleep(self.delay)
+            
+            # Look for and fill the search form
+            self.logger.info("Looking for search form...")
+            
+            # Try to find the location/search input
             try:
-                listing = self.parse_listing_card(card)
-                if listing and self.validate_listing(listing):
-                    listings.append(listing)
-                    self.stats['listings_parsed'] += 1
+                # Common selectors for search inputs
+                search_selectors = [
+                    "input[placeholder*='Search']",
+                    "input[placeholder*='City']",
+                    "input[placeholder*='Suburb']",
+                    "input[type='search']",
+                    ".search-input",
+                    "#search-box"
+                ]
+                
+                search_input = None
+                for selector in search_selectors:
+                    try:
+                        search_input = self.wait.until(
+                            EC.presence_of_element_located((By.CSS_SELECTOR, selector))
+                        )
+                        if search_input:
+                            self.logger.info(f"Found search input with selector: {selector}")
+                            break
+                    except:
+                        continue
+                
+                if search_input:
+                    # Type "Nairobi"
+                    search_input.clear()
+                    search_input.send_keys("Nairobi")
+                    time.sleep(1)
+                    
+                    # Try to find and click search button
+                    button_selectors = [
+                        "button[type='submit']",
+                        ".search-button",
+                        "button:contains('Search')",
+                        "input[type='submit']"
+                    ]
+                    
+                    for selector in button_selectors:
+                        try:
+                            search_button = self.driver.find_element(By.CSS_SELECTOR, selector)
+                            search_button.click()
+                            self.logger.info("Clicked search button")
+                            break
+                        except:
+                            continue
+                    
+                    # Wait for results to load
+                    time.sleep(5)
+                    
             except Exception as e:
-                self.logger.error(f"Error parsing listing: {str(e)}")
-                self.stats['errors'] += 1
+                self.logger.error(f"Error with search form: {str(e)}")
+            
+            # Now try to scrape the results
+            for page in range(1, max_pages + 1):
+                self.logger.info(f"Scraping page {page}")
+                
+                # Wait for property listings to load
+                time.sleep(3)
+                
+                # Get page source and parse with BeautifulSoup
+                soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+                
+                # Find property listings
+                listings = self.find_listings(soup)
+                self.logger.info(f"Found {len(listings)} listings on page {page}")
+                
+                for listing in listings[:15]:
+                    try:
+                        parsed = self.parse_listing(listing)
+                        if parsed:
+                            all_listings.append(parsed)
+                    except Exception as e:
+                        continue
+                
+                # Try to go to next page
+                try:
+                    next_button = self.driver.find_element(By.LINK_TEXT, "Next")
+                    next_button.click()
+                except:
+                    try:
+                        next_button = self.driver.find_element(By.CSS_SELECTOR, ".pagination-next")
+                        next_button.click()
+                    except:
+                        self.logger.info("No next page found")
+                        break
+            
+        except Exception as e:
+            self.logger.error(f"Scraping error: {str(e)}")
         
-        return listings
+        finally:
+            self.driver.quit()
+        
+        return all_listings
     
-    def parse_listing_card(self, card) -> Optional[Dict]:
-        """Parse a single listing card"""
+    def find_listings(self, soup):
+        """Find listing elements in the page"""
+        # Try various selectors that might contain listings
+        selectors = [
+            soup.find_all('div', class_=re.compile(r'property|listing|card|result')),
+            soup.find_all('article'),
+            [div for div in soup.find_all('div') 
+             if div.get_text() and 'KSh' in div.get_text() 
+             and len(div.get_text().strip()) > 100]
+        ]
         
-        # Extract title
-        title_elem = card.find('span', class_=re.compile(r'p24_title'))
-        title = title_elem.text.strip() if title_elem else ""
-        
-        # Extract location
-        location_elem = card.find('span', class_=re.compile(r'p24_location'))
-        location_text = location_elem.text.strip() if location_elem else ""
-        
-        # Extract price
-        price_elem = card.find('span', class_=re.compile(r'p24_price'))
-        price_text = price_elem.text.strip() if price_elem else ""
-        price_kes = self.parse_price(price_text)
-        
-        # Skip if no price
-        if not price_kes:
+        for selector in selectors:
+            if selector and len(selector) > 0:
+                return selector
+        return []
+    
+    def parse_listing(self, element):
+        """Parse a listing element"""
+        try:
+            text = element.get_text()
+            
+            # Extract price
+            price_match = re.search(r'KSh\s*([\d,]+(?:\.\d+)?)', text, re.IGNORECASE)
+            if not price_match:
+                return None
+            
+            price_str = price_match.group(1).replace(',', '')
+            price = int(float(price_str))
+            
+            # Extract title
+            title_elem = element.find(['h3', 'h4', 'h5', 'h6'])
+            title = title_elem.text.strip() if title_elem else "Property"
+            
+            # Extract location
+            location = "Nairobi"
+            for area in ['Kilimani', 'Kileleshwa', 'Karen', 'Westlands', 'Lavington', 'Runda']:
+                if area.lower() in text.lower():
+                    location = area
+                    break
+            
+            # Extract bedrooms
+            bedrooms = None
+            bed_match = re.search(r'(\d+)\s*(?:bed|bedroom|br)', text, re.IGNORECASE)
+            if bed_match:
+                bedrooms = int(bed_match.group(1))
+            
+            return {
+                'listing_id': self.generate_id(text[:50]),
+                'source': self.source_name,
+                'title': title[:100],
+                'location': location,
+                'property_type': 'Unknown',
+                'bedrooms': bedrooms,
+                'bathrooms': None,
+                'size_sqft': None,
+                'price_kes': price,
+                'listing_date': datetime.now().strftime('%Y-%m-%d'),
+                'listing_url': ''
+            }
+            
+        except Exception as e:
             return None
-        
-        # Get card text
-        card_text = card.get_text().lower()
-        
-        # Extract features from description
-        description_elem = card.find('div', class_=re.compile(r'p24_description'))
-        description = description_elem.text.lower() if description_elem else ""
-        
-        # Parse bedrooms, bathrooms, size
-        bedrooms = self.parse_bedrooms(description) or self.parse_bedrooms(card_text)
-        bathrooms = self.parse_bathrooms(description) or self.parse_bathrooms(card_text)
-        
-        # Parse size from description
-        size_sqft = None
-        size_match = re.search(r'(\d+)\s*(?:m²|sqm|sq m)', description)
-        if size_match:
-            size_sqft = float(size_match.group(1)) * 10.764  # Convert to sqft
-        
-        # Extract amenities
-        amenities = self.extract_amenities(description)
-        
-        # Get listing URL
-        link_elem = card.find('a', href=True)
-        listing_url = f"{self.base_url}{link_elem['href']}" if link_elem else ""
-        
-        # Determine property type
-        property_type = "Unknown"
-        title_lower = title.lower()
-        for ptype in ['apartment', 'house', 'villa', 'bungalow', 'maisonette', 'townhouse', 'land', 'commercial']:
-            if ptype in title_lower:
-                property_type = ptype.capitalize()
-                break
-        
-        return {
-            'listing_id': self.generate_listing_id(listing_url),
-            'source': self.source_name,
-            'title': title,
-            'location': self.standardize_location(location_text),
-            'property_type': property_type,
-            'bedrooms': bedrooms,
-            'bathrooms': bathrooms,
-            'size_sqft': size_sqft,
-            'price_kes': price_kes,
-            'amenities': '|'.join(amenities) if amenities else '',
-            'listing_date': datetime.now().strftime('%Y-%m-%d'),
-            'listing_url': listing_url,
-            'scraped_at': datetime.now().isoformat()
-        }
+    
+    def generate_id(self, text):
+        """Generate a simple ID"""
+        import hashlib
+        return hashlib.md5(text.encode()).hexdigest()[:10]

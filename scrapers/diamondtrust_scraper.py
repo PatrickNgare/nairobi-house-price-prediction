@@ -1,4 +1,4 @@
-# scrapers/buyrentkenya_scraper.py
+# scrapers/diamondtrust_scraper.py
 from bs4 import BeautifulSoup
 import re
 from datetime import datetime
@@ -10,15 +10,16 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.locations import ALL_AREAS
 from utils.helpers import clean_price, generate_id
 
-class BuyRentKenyaScraper(BaseScraper):
+class DiamondTrustScraper(BaseScraper):
     def __init__(self):
         super().__init__(
-            name="BuyRentKenya",
-            base_url="https://www.buyrentkenya.com"
+            name="DiamondTrust",
+            base_url="https://www.dtbkenya.co.ke"
         )
     
     def get_page_url(self, page):
-        return f"{self.base_url}/search?category=for-sale&location=nairobi&page={page}"
+        # Note: This URL pattern might need adjustment
+        return f"{self.base_url}/property/property-for-sale?page={page}"
     
     def parse_listing(self, price_element, soup):
         """Parse a listing from price element"""
@@ -35,7 +36,6 @@ class BuyRentKenyaScraper(BaseScraper):
                 return None
             
             container_text = container.get_text()
-            container_html = str(container)
             
             # Extract price
             price = clean_price(str(price_element))
@@ -57,7 +57,7 @@ class BuyRentKenyaScraper(BaseScraper):
             
             # Extract bedrooms
             bedrooms = None
-            bed_match = re.search(r'(\d+)\s*(?:bed|bedroom|br)', container_text, re.IGNORECASE)
+            bed_match = re.search(r'(\d+)\s*(?:bed|bedroom)', container_text, re.IGNORECASE)
             if bed_match:
                 bedrooms = int(bed_match.group(1))
             
@@ -77,45 +77,18 @@ class BuyRentKenyaScraper(BaseScraper):
                 except:
                     pass
             
-            # Extract property type
-            property_type = "Unknown"
-            type_keywords = {
-                'apartment': 'Apartment', 'flat': 'Apartment',
-                'house': 'House', 'villa': 'Villa',
-                'bungalow': 'Bungalow', 'maisonette': 'Maisonette',
-                'townhouse': 'Townhouse', 'land': 'Land'
-            }
-            for keyword, ptype in type_keywords.items():
-                if keyword in container_text.lower():
-                    property_type = ptype
-                    break
-            
-            # Extract amenities
-            amenities = []
-            amenity_keywords = ['pool', 'gym', 'parking', 'security', 'garden', 
-                               'balcony', 'furnished', 'cctv', 'internet']
-            for amenity in amenity_keywords:
-                if amenity in container_text.lower():
-                    amenities.append(amenity)
-            
-            # Get URL
-            link = container.find('a', href=True)
-            url = link['href'] if link else ""
-            if url and not url.startswith('http'):
-                url = f"{self.base_url}{url}"
-            
             return {
                 'source': self.name,
-                'listing_id': generate_id(url or container_text[:50]),
+                'listing_id': generate_id(container_text[:50]),
                 'title': title[:200],
                 'location': location,
-                'property_type': property_type,
+                'property_type': 'Unknown',
                 'bedrooms': bedrooms,
                 'bathrooms': bathrooms,
                 'size_sqft': size_sqft,
                 'price_kes': price,
-                'amenities': '|'.join(amenities) if amenities else None,
-                'listing_url': url,
+                'amenities': None,
+                'listing_url': '',
                 'scrape_date': datetime.now().strftime('%Y-%m-%d')
             }
             
