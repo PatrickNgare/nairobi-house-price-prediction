@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# Secrets
+secrets/
+
+# Data artifacts
+data/interim/
+data/processed/
+*.parquet
+*.feather
+
+# Models
+models/
+*.pkl
+*.joblib
+
+# Streamlit
+.streamlit/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

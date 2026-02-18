@@ -1,0 +1,29 @@
+# Core scraping
+requests==2.31.0
+beautifulsoup4==4.12.2
+selenium==4.15.0
+lxml==4.9.3
+fake-useragent==1.4.0
+
+# Data handling
+pandas==2.1.0
+numpy==1.24.3
+
+# Web scraping utilities
+retry==0.9.2
+timeout-decorator==0.5.0
+
+# For web scraping with JavaScript sites
+webdriver-manager==4.0.1
+
+# For data validation
+pydantic==2.4.0
+
+# For progress bars
+tqdm==4.66.1
+
+# For Jupyter notebooks (Day 1 review)
+jupyter==1.0.0
+matplotlib==3.7.2
+seaborn==0.12.2
+
