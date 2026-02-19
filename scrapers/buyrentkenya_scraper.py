@@ -1,8 +1,11 @@
 # scrapers/buyrentkenya_scraper.py
+"""
+BuyRentKenya Selenium-based scraper for property listings.
+"""
 from bs4 import BeautifulSoup
 import re
 from datetime import datetime
-from .base_scraper import BaseScraper
+from .selenium_base_scraper import SeleniumBaseScraper
 import sys
 import os
 
@@ -10,50 +13,56 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.locations import ALL_AREAS
 from utils.helpers import clean_price, generate_id
 
-class BuyRentKenyaScraper(BaseScraper):
+class BuyRentKenyaScraper(SeleniumBaseScraper):
     def __init__(self):
         super().__init__(
             name="BuyRentKenya",
-            base_url="https://www.buyrentkenya.com"
+            base_url="https://www.buyrentkenya.com",
+            headless=True
         )
     
     def get_page_url(self, page):
         return f"{self.base_url}/search?category=for-sale&location=nairobi&page={page}"
     
-    def parse_listing(self, price_element, soup):
-        """Parse a listing from price element"""
+    def parse_listing(self, element):
+        """Parse a listing from HTML element"""
         try:
-            # Get container
-            container = price_element.parent
-            for _ in range(5):
-                if container and container.name == 'div':
-                    break
-                if container:
-                    container = container.parent
+            # Convert element to string if necessary
+            if not isinstance(element, str):
+                element_text = str(element)
+            else:
+                element_text = element
+            
+            # Parse HTML if needed
+            if '<' in element_text:
+                soup = BeautifulSoup(element_text, 'html.parser')
+                container = soup.find(['div', 'article', 'li'])
+            else:
+                container = element.parent if hasattr(element, 'parent') else None
+                if not container:
+                    return None
             
             if not container:
                 return None
             
-            container_text = container.get_text()
-            container_html = str(container)
+            container_text = container.get_text(separator=" ", strip=True) if hasattr(container, 'get_text') else str(container)
             
             # Extract price
-            price = clean_price(str(price_element))
+            price = clean_price(container_text)
             if not price:
                 return None
             
             # Extract title
-            title_elem = container.find(['h3', 'h4', 'h5'])
-            title = title_elem.get_text(strip=True) if title_elem else "No title"
+            title_elem = container.find(['h3', 'h4', 'h5', 'a']) if hasattr(container, 'find') else None
+            title = title_elem.get_text(strip=True) if title_elem else "Property"
             
             # Extract location
-            location = None
+            location = "Nairobi"
             for area in ALL_AREAS:
-                if area.replace('-', ' ') in container_text.lower() or area in container_text.lower():
+                area_pattern = area.replace('-', ' ').lower()
+                if area_pattern in container_text.lower() or area.lower() in container_text.lower():
                     location = area.title().replace('-', ' ')
                     break
-            if not location:
-                location = "Nairobi"
             
             # Extract bedrooms
             bedrooms = None
@@ -83,31 +92,31 @@ class BuyRentKenyaScraper(BaseScraper):
                 'apartment': 'Apartment', 'flat': 'Apartment',
                 'house': 'House', 'villa': 'Villa',
                 'bungalow': 'Bungalow', 'maisonette': 'Maisonette',
-                'townhouse': 'Townhouse', 'land': 'Land'
+                'townhouse': 'Townhouse', 'land': 'Land', 'commercial': 'Commercial'
             }
             for keyword, ptype in type_keywords.items():
-                if keyword in container_text.lower():
+                if re.search(rf'\b{keyword}\b', container_text, re.IGNORECASE):
                     property_type = ptype
                     break
             
             # Extract amenities
             amenities = []
             amenity_keywords = ['pool', 'gym', 'parking', 'security', 'garden', 
-                               'balcony', 'furnished', 'cctv', 'internet']
+                               'balcony', 'furnished', 'cctv', 'internet', 'lift', 'security']
             for amenity in amenity_keywords:
-                if amenity in container_text.lower():
+                if amenity.lower() in container_text.lower():
                     amenities.append(amenity)
             
             # Get URL
-            link = container.find('a', href=True)
+            link = container.find('a', href=True) if hasattr(container, 'find') else None
             url = link['href'] if link else ""
             if url and not url.startswith('http'):
                 url = f"{self.base_url}{url}"
             
-            return {
+            listing = {
                 'source': self.name,
                 'listing_id': generate_id(url or container_text[:50]),
-                'title': title[:200],
+                'title': title[:200] if title else "Property",
                 'location': location,
                 'property_type': property_type,
                 'bedrooms': bedrooms,
@@ -119,5 +128,8 @@ class BuyRentKenyaScraper(BaseScraper):
                 'scrape_date': datetime.now().strftime('%Y-%m-%d')
             }
             
+            return listing
+            
         except Exception as e:
+            self.logger.error(f"Error parsing listing: {str(e)}")
             return None

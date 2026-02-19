@@ -1,20 +1,19 @@
-# Core scraping
-requests==2.31.0
-beautifulsoup4==4.12.2
-selenium==4.15.0
-lxml==4.9.3
+# Core scraping - Selenium-based
+selenium==4.15.2
+beautifulsoup4==4.14.3
+lxml==6.0.2
 
+# WebDriver management
+webdriver-manager==4.0.1
 
 # Data handling
-pandas==2.1.0
-numpy==1.24.3
+pandas==3.0.1
+numpy==2.4.2
 
 # Web scraping utilities
-
+requests==2.32.5
+fake-useragent==2.2.0
 timeout-decorator==0.5.0
-
-# For web scraping with JavaScript sites
-webdriver-manager==4.0.1
 
 # For data validation
 pydantic==2.4.0
@@ -22,32 +21,21 @@ pydantic==2.4.0
 # For progress bars
 tqdm==4.66.1
 
-# For Jupyter notebooks (Day 1 review)
+# For Jupyter notebooks
 jupyter==1.0.0
 matplotlib==3.7.2
 seaborn==0.12.2
 
-beautifulsoup4==4.14.3
+# Additional dependencies
 certifi==2026.1.4
 charset-normalizer==3.4.4
-fake-useragent==2.2.0
 idna==3.11
-lxml==6.0.2
-numpy==2.4.2
-pandas==3.0.1
 python-dateutil==2.9.0.post0
-requests==2.32.5
 six==1.17.0
 soupsieve==2.8.3
 typing_extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
-beautifulsoup4==4.14.3
-certifi==2026.1.4
-charset-normalizer==3.4.4
-decorator==5.2.1
-fake-useragent==2.2.0
-idna==3.11
 lxml==6.0.2
 numpy==2.4.2
 pandas==3.0.1

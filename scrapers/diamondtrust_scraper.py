@@ -1,8 +1,11 @@
 # scrapers/diamondtrust_scraper.py
+"""
+DiamondTrust Selenium-based scraper for property listings.
+"""
 from bs4 import BeautifulSoup
 import re
 from datetime import datetime
-from .base_scraper import BaseScraper
+from .selenium_base_scraper import SeleniumBaseScraper
 import sys
 import os
 
@@ -10,50 +13,57 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.locations import ALL_AREAS
 from utils.helpers import clean_price, generate_id
 
-class DiamondTrustScraper(BaseScraper):
+class DiamondTrustScraper(SeleniumBaseScraper):
     def __init__(self):
         super().__init__(
             name="DiamondTrust",
-            base_url="https://www.dtbkenya.co.ke"
+            base_url="https://www.dtbkenya.co.ke",
+            headless=True
         )
     
     def get_page_url(self, page):
-        # Note: This URL pattern might need adjustment
+        """Get page URL for DiamondTrust"""
         return f"{self.base_url}/property/property-for-sale?page={page}"
     
-    def parse_listing(self, price_element, soup):
-        """Parse a listing from price element"""
+    def parse_listing(self, element):
+        """Parse a listing from HTML element"""
         try:
-            # Get container
-            container = price_element.parent
-            for _ in range(5):
-                if container and container.name == 'div':
-                    break
-                if container:
-                    container = container.parent
+            # Convert element to string if necessary
+            if not isinstance(element, str):
+                element_text = str(element)
+            else:
+                element_text = element
+            
+            # Parse HTML if needed
+            if '<' in element_text:
+                soup = BeautifulSoup(element_text, 'html.parser')
+                container = soup.find(['div', 'article', 'li'])
+            else:
+                container = element.parent if hasattr(element, 'parent') else None
+                if not container:
+                    return None
             
             if not container:
                 return None
             
-            container_text = container.get_text()
+            container_text = container.get_text(separator=" ", strip=True) if hasattr(container, 'get_text') else str(container)
             
             # Extract price
-            price = clean_price(str(price_element))
+            price = clean_price(container_text)
             if not price:
                 return None
             
             # Extract title
-            title_elem = container.find(['h3', 'h4', 'h5'])
-            title = title_elem.get_text(strip=True) if title_elem else "No title"
+            title_elem = container.find(['h3', 'h4', 'h5', 'a']) if hasattr(container, 'find') else None
+            title = title_elem.get_text(strip=True) if title_elem else "Property"
             
             # Extract location
-            location = None
+            location = "Nairobi"
             for area in ALL_AREAS:
-                if area.replace('-', ' ') in container_text.lower() or area in container_text.lower():
+                area_pattern = area.replace('-', ' ').lower()
+                if area_pattern in container_text.lower() or area.lower() in container_text.lower():
                     location = area.title().replace('-', ' ')
                     break
-            if not location:
-                location = "Nairobi"
             
             # Extract bedrooms
             bedrooms = None
@@ -77,10 +87,10 @@ class DiamondTrustScraper(BaseScraper):
                 except:
                     pass
             
-            return {
+            listing = {
                 'source': self.name,
                 'listing_id': generate_id(container_text[:50]),
-                'title': title[:200],
+                'title': title[:200] if title else "Property",
                 'location': location,
                 'property_type': 'Unknown',
                 'bedrooms': bedrooms,
@@ -92,5 +102,8 @@ class DiamondTrustScraper(BaseScraper):
                 'scrape_date': datetime.now().strftime('%Y-%m-%d')
             }
             
+            return listing
+            
         except Exception as e:
+            self.logger.error(f"Error parsing listing: {str(e)}")
             return None
