@@ -1,0 +1,801 @@
+source,listing_id,title,location,property_type,bedrooms,bathrooms,size_sqft,price_kes,amenities,listing_url,scrape_date
+DiamondTrust,A0000,3BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,3,2,1173,21850876,,https://example.com/property/0,2026-01-23
+BuyRentKenya,B0001,1BR Townhouse in Runda,Runda,Townhouse,1,1,1011,68839086,,https://example.com/property/1,2026-01-27
+BuyRentKenya,C0002,3BR Villa in Kileleshwa,Kileleshwa,Villa,3,3,2497,38227887,,https://example.com/property/2,2026-01-25
+BuyRentKenya,D0003,3BR House in Kileleshwa,Kileleshwa,House,3,3,2238,29325823,lift|pool,https://example.com/property/3,2026-01-29
+BuyRentKenya,E0004,3BR Townhouse in Runda,Runda,Townhouse,3,2,1646,114841361,pool|gym|garden,https://example.com/property/4,2026-01-23
+DiamondTrust,F0005,4BR Villa in Thika Road,Thika Road,Villa,4,4,3552,7652154,,https://example.com/property/5,2026-01-29
+DiamondTrust,G0006,4BR House in Runda,Runda,House,4,4,2863,227017145,balcony|gym|internet|water,https://example.com/property/6,2026-02-07
+DiamondTrust,H0007,1BR Bungalow in Donholm,Donholm,Bungalow,1,1,904,6836911,playground|cctv|security|water|furnished,https://example.com/property/7,2026-02-17
+BuyRentKenya,I0008,4BR Villa in Komarock,Komarock,Villa,4,3,3885,4911140,playground|parking|garden,https://example.com/property/8,2026-01-25
+PropertyPro,J0009,2BR Townhouse in Langata,Langata,Townhouse,2,1,1162,14365855,furnished|balcony|internet|pool|security,https://example.com/property/9,2026-02-01
+PropertyPro,K0010,1BR House in Parklands,Parklands,House,1,1,1162,10000000,,https://example.com/property/10,2026-02-15
+PropertyPro,L0011,3BR Apartment in Westlands,Westlands,Apartment,3,3,1377,31041037,,https://example.com/property/11,2026-01-26
+DiamondTrust,M0012,3BR House in Parklands,Parklands,House,3,2,1765,16299547,,https://example.com/property/12,2026-02-13
+PropertyPro,N0013,3BR Bungalow in Embakasi,Embakasi,Bungalow,3,2,2529,7490553,,https://example.com/property/13,2026-02-12
+BuyRentKenya,O0014,2BR Bungalow in Kasarani,Kasarani,Bungalow,2,2,1528,4416426,water|playground|furnished|lift,https://example.com/property/14,2026-01-26
+DiamondTrust,P0015,1BR Bungalow in Upper Hill,Upper Hill,Bungalow,1,1,1227,48406416,,https://example.com/property/15,2026-02-17
+DiamondTrust,Q0016,4BR House in Kileleshwa,Kileleshwa,House,4,3,2594,64833735,furnished|garden|gym|water,https://example.com/property/16,2026-02-17
+BuyRentKenya,R0017,3BR Bungalow in Thika Road,Thika Road,Bungalow,3,3,2411,7608757,,https://example.com/property/17,2026-02-13
+PropertyPro,S0018,1BR Apartment in Upper Hill,Upper Hill,Apartment,1,2,559,20000000,,https://example.com/property/18,2026-01-26
+BuyRentKenya,T0019,3BR Townhouse in Komarock,Komarock,Townhouse,3,2,1722,8941565,,https://example.com/property/19,2026-02-06
+PropertyPro,U0020,4BR House in Kileleshwa,Kileleshwa,House,4,4,3153,53361732,lift|generator|water,https://example.com/property/20,2026-01-24
+BuyRentKenya,V0021,4BR Apartment in Ngong,Ngong,Apartment,4,3,1291,33868784,balcony|lift,https://example.com/property/21,2026-02-19
+DiamondTrust,W0022,3BR House in Westlands,Westlands,House,3,2,2098,50172402,internet|playground|furnished|garden|security,https://example.com/property/22,2026-02-18
+BuyRentKenya,X0023,3BR House in Kasarani,Kasarani,House,3,2,2012,5226681,cctv|balcony,https://example.com/property/23,2026-01-21
+PropertyPro,Y0024,2BR Townhouse in Syokimau,Syokimau,Townhouse,2,1,1022,11000566,,https://example.com/property/24,2026-02-10
+DiamondTrust,Z0025,3BR House in Westlands,Westlands,House,3,3,2120,47940384,,https://example.com/property/25,2026-01-20
+PropertyPro,A0026,2BR House in Kilimani,Kilimani,House,2,1,1184,15000000,internet|water|generator|playground|garden,https://example.com/property/26,2026-02-07
+DiamondTrust,B0027,5BR Townhouse in Syokimau,Syokimau,Townhouse,5,4,914,22403389,cctv|balcony,https://example.com/property/27,2026-01-28
+BuyRentKenya,C0028,2BR Villa in Karen,Karen,Villa,2,1,1184,38700376,,https://example.com/property/28,2026-02-11
+PropertyPro,D0029,3BR Townhouse in Upper Hill,Upper Hill,Townhouse,3,3,1905,92792859,generator|security,https://example.com/property/29,2026-02-03
+PropertyPro,E0030,1BR Villa in Lavington,Lavington,Villa,1,2,871,40867759,cctv|security,https://example.com/property/30,2026-02-17
+DiamondTrust,F0031,1BR House in Lavington,Lavington,House,1,1,1011,16233627,parking|generator,https://example.com/property/31,2026-02-02
+BuyRentKenya,G0032,3BR Apartment in Runda,Runda,Apartment,3,2,1033,191786738,pool|parking|water|playground,https://example.com/property/32,2026-02-06
+BuyRentKenya,H0033,4BR Townhouse in Donholm,Donholm,Townhouse,4,4,1722,14204374,generator|cctv,https://example.com/property/33,2026-02-12
+PropertyPro,I0034,2BR Villa in Embakasi,Embakasi,Villa,2,2,893,9004448,furnished|garden|balcony,https://example.com/property/34,2026-01-21
+DiamondTrust,J0035,3BR Villa in Lavington,Lavington,Villa,3,3,2454,51113163,,https://example.com/property/35,2026-02-06
+DiamondTrust,K0036,5BR Townhouse in Kasarani,Kasarani,Townhouse,5,4,1248,24000000,playground|pool|lift,https://example.com/property/36,2026-01-22
+DiamondTrust,L0037,3BR House in Kasarani,Kasarani,House,3,2,1679,5620177,generator|water|garden|security|playground,https://example.com/property/37,2026-01-25
+BuyRentKenya,M0038,4BR House in Karen,Karen,House,4,3,2486,51146660,,https://example.com/property/38,2026-01-30
+BuyRentKenya,N0039,1BR House in Buruburu,Buruburu,House,1,1,1151,6098474,,https://example.com/property/39,2026-01-30
+BuyRentKenya,O0040,2BR Townhouse in Buruburu,Buruburu,Townhouse,2,2,1205,12229333,,https://example.com/property/40,2026-02-13
+BuyRentKenya,P0041,2BR Townhouse in Kilimani,Kilimani,Townhouse,2,1,1173,31790203,,https://example.com/property/41,2026-02-07
+DiamondTrust,Q0042,2BR Villa in Buruburu,Buruburu,Villa,2,2,1151,10474361,cctv|pool|security|water|garden,https://example.com/property/42,2026-02-02
+BuyRentKenya,R0043,4BR Apartment in Karen,Karen,Apartment,4,3,1528,174836188,balcony|furnished|gym|cctv,https://example.com/property/43,2026-01-24
+BuyRentKenya,S0044,4BR Bungalow in Runda,Runda,Bungalow,4,4,3659,225860919,,https://example.com/property/44,2026-01-22
+BuyRentKenya,T0045,3BR Apartment in Parklands,Parklands,Apartment,3,3,1097,11873495,garden|pool|furnished|cctv|internet,https://example.com/property/45,2026-02-11
+DiamondTrust,U0046,2BR House in Parklands,Parklands,House,2,2,1140,22519569,generator|pool,https://example.com/property/46,2026-02-01
+DiamondTrust,V0047,1BR Townhouse in Buruburu,Buruburu,Townhouse,1,2,968,7148476,,https://example.com/property/47,2026-02-17
+PropertyPro,W0048,3BR House in Syokimau,Syokimau,House,3,3,2152,6487957,lift|parking|furnished,https://example.com/property/48,2026-01-31
+BuyRentKenya,X0049,4BR House in Thika Road,Thika Road,House,4,4,2518,4601530,,https://example.com/property/49,2026-02-13
+BuyRentKenya,Y0050,1BR House in Kasarani,Kasarani,House,1,1,1184,5831540,parking|lift,https://example.com/property/50,2026-02-02
+DiamondTrust,Z0051,2BR Bungalow in Embakasi,Embakasi,Bungalow,2,2,1431,3665063,,https://example.com/property/51,2026-02-05
+DiamondTrust,A0052,3BR Apartment in Kileleshwa,Kileleshwa,Apartment,3,2,1173,42347946,water|playground|balcony,https://example.com/property/52,2026-02-11
+DiamondTrust,B0053,4BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,4,3,3358,59919072,security|pool|water,https://example.com/property/53,2026-01-20
+PropertyPro,C0054,5BR House in Thika Road,Thika Road,House,5,4,3670,15592407,lift|balcony|cctv|water|pool,https://example.com/property/54,2026-02-01
+DiamondTrust,D0055,2BR Apartment in Kitengela,Kitengela,Apartment,2,2,871,4270377,generator|security|parking,https://example.com/property/55,2026-02-17
+PropertyPro,E0056,2BR Villa in Runda,Runda,Villa,2,2,1270,99075982,parking|security,https://example.com/property/56,2026-01-31
+BuyRentKenya,F0057,4BR Apartment in Karen,Karen,Apartment,4,3,1388,123650821,lift|security|furnished|water|garden,https://example.com/property/57,2026-02-06
+DiamondTrust,G0058,3BR Bungalow in Buruburu,Buruburu,Bungalow,3,2,1872,4753201,water|generator,https://example.com/property/58,2026-02-02
+BuyRentKenya,H0059,3BR House in Parklands,Parklands,House,3,2,1819,13832913,balcony|water|pool,https://example.com/property/59,2026-02-05
+DiamondTrust,I0060,3BR House in Ongata Rongai,Ongata Rongai,House,3,2,1808,5427388,water|security|parking|internet|playground,https://example.com/property/60,2026-01-26
+DiamondTrust,J0061,4BR Townhouse in Ngong,Ngong,Townhouse,4,4,2389,20824379,furnished|security|balcony|gym,https://example.com/property/61,2026-02-17
+PropertyPro,K0062,2BR Villa in Kileleshwa,Kileleshwa,Villa,2,2,1108,33506001,pool|furnished|balcony,https://example.com/property/62,2026-02-12
+PropertyPro,L0063,5BR Villa in Karen,Karen,Villa,5,5,5091,76488976,lift|water|security|garden,https://example.com/property/63,2026-02-05
+BuyRentKenya,M0064,2BR Apartment in Kilimani,Kilimani,Apartment,2,1,742,17531796,generator|water|gym,https://example.com/property/64,2026-01-30
+DiamondTrust,N0065,2BR Townhouse in Runda,Runda,Townhouse,2,1,1237,125256198,furnished|balcony|parking|lift|cctv,https://example.com/property/65,2026-01-27
+DiamondTrust,O0066,5BR House in Parklands,Parklands,House,5,4,3745,47158509,gym|parking,https://example.com/property/66,2026-02-08
+BuyRentKenya,P0067,2BR Bungalow in Buruburu,Buruburu,Bungalow,2,2,1463,10818308,,https://example.com/property/67,2026-02-16
+PropertyPro,Q0068,2BR Apartment in Donholm,Donholm,Apartment,2,1,979,9258995,internet|parking|cctv,https://example.com/property/68,2026-02-13
+DiamondTrust,R0069,2BR Villa in Komarock,Komarock,Villa,2,1,893,13630415,balcony|garden,https://example.com/property/69,2026-02-09
+BuyRentKenya,S0070,2BR Townhouse in Kasarani,Kasarani,Townhouse,2,1,1033,10210126,,https://example.com/property/70,2026-02-11
+BuyRentKenya,T0071,2BR Bungalow in Lavington,Lavington,Bungalow,2,2,1560,29438492,cctv|balcony|lift|gym,https://example.com/property/71,2026-02-10
+BuyRentKenya,U0072,1BR Apartment in Langata,Langata,Apartment,1,2,538,12153591,lift|playground,https://example.com/property/72,2026-01-31
+PropertyPro,V0073,2BR House in Westlands,Westlands,House,2,1,1496,63206761,pool|security|internet,https://example.com/property/73,2026-02-04
+PropertyPro,W0074,1BR Bungalow in Parklands,Parklands,Bungalow,1,1,882,12326640,garden|playground|pool|parking,https://example.com/property/74,2026-02-03
+PropertyPro,X0075,3BR Villa in Kitengela,Kitengela,Villa,3,2,2400,10180029,cctv|water|furnished,https://example.com/property/75,2026-02-06
+PropertyPro,Y0076,5BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,5,4,1216,57774002,cctv|lift|parking|water|pool,https://example.com/property/76,2026-02-19
+DiamondTrust,Z0077,2BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,2,1,1829,21237755,generator|security,https://example.com/property/77,2026-02-11
+PropertyPro,A0078,4BR Townhouse in Karen,Karen,Townhouse,4,4,1894,181297129,generator|internet|balcony,https://example.com/property/78,2026-02-13
+BuyRentKenya,B0079,3BR Villa in Kileleshwa,Kileleshwa,Villa,3,2,2809,20848073,,https://example.com/property/79,2026-01-23
+PropertyPro,C0080,4BR House in Karen,Karen,House,4,4,2615,191068052,,https://example.com/property/80,2026-02-10
+BuyRentKenya,D0081,2BR Townhouse in Upper Hill,Upper Hill,Townhouse,2,1,1001,48283379,,https://example.com/property/81,2026-02-14
+DiamondTrust,E0082,5BR House in Ongata Rongai,Ongata Rongai,House,5,4,4327,21698833,cctv|generator|water,https://example.com/property/82,2026-02-15
+BuyRentKenya,F0083,3BR Apartment in Kitengela,Kitengela,Apartment,3,2,1097,14159719,,https://example.com/property/83,2026-02-17
+PropertyPro,G0084,4BR Townhouse in Kilimani,Kilimani,Townhouse,4,4,2120,35915365,,https://example.com/property/84,2026-01-27
+DiamondTrust,H0085,3BR Apartment in Langata,Langata,Apartment,3,3,1162,15604365,furnished|pool|internet,https://example.com/property/85,2026-02-02
+BuyRentKenya,I0086,2BR Townhouse in Thika Road,Thika Road,Townhouse,2,1,1205,9325489,,https://example.com/property/86,2026-02-14
+BuyRentKenya,J0087,4BR Villa in Embakasi,Embakasi,Villa,4,3,4402,9287928,water|cctv|lift,https://example.com/property/87,2026-02-19
+PropertyPro,K0088,3BR Townhouse in Upper Hill,Upper Hill,Townhouse,3,2,1733,28347075,,https://example.com/property/88,2026-02-08
+DiamondTrust,L0089,4BR Bungalow in Karen,Karen,Bungalow,4,3,3627,92359116,,https://example.com/property/89,2026-01-28
+PropertyPro,M0090,2BR Townhouse in Kitengela,Kitengela,Townhouse,2,2,1270,4680052,,https://example.com/property/90,2026-02-12
+DiamondTrust,N0091,2BR Villa in Kilimani,Kilimani,Villa,2,2,1022,27858202,playground|generator|garden|pool,https://example.com/property/91,2026-01-30
+BuyRentKenya,O0092,4BR House in Komarock,Komarock,House,4,4,2960,12195392,,https://example.com/property/92,2026-02-01
+DiamondTrust,P0093,2BR Townhouse in Kasarani,Kasarani,Townhouse,2,2,871,8433525,,https://example.com/property/93,2026-01-21
+BuyRentKenya,Q0094,3BR Townhouse in Runda,Runda,Townhouse,3,3,1431,47944282,generator|parking|security,https://example.com/property/94,2026-01-23
+DiamondTrust,R0095,2BR Apartment in Ngong,Ngong,Apartment,2,2,828,23934761,gym|water|security|cctv|generator,https://example.com/property/95,2026-02-11
+PropertyPro,S0096,2BR Villa in Thika Road,Thika Road,Villa,2,2,947,4029986,balcony|generator,https://example.com/property/96,2026-02-16
+PropertyPro,T0097,3BR House in Komarock,Komarock,House,3,2,1819,4022322,generator|water|playground|security|lift,https://example.com/property/97,2026-02-09
+PropertyPro,U0098,4BR Apartment in Langata,Langata,Apartment,4,4,1334,38215916,balcony|generator|pool|cctv|lift,https://example.com/property/98,2026-01-29
+PropertyPro,V0099,4BR Bungalow in Komarock,Komarock,Bungalow,4,4,3089,13647825,,https://example.com/property/99,2026-02-15
+DiamondTrust,W0100,3BR House in Runda,Runda,House,3,2,2152,143784043,balcony|playground,https://example.com/property/100,2026-01-26
+PropertyPro,X0101,4BR Villa in Kitengela,Kitengela,Villa,4,3,3907,8308802,,https://example.com/property/101,2026-01-28
+DiamondTrust,Y0102,3BR House in Kilimani,Kilimani,House,3,3,2271,21134512,gym|security|playground|generator|garden,https://example.com/property/102,2026-02-01
+PropertyPro,Z0103,2BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,2,2,1926,7592809,,https://example.com/property/103,2026-01-21
+DiamondTrust,A0104,1BR Apartment in Komarock,Komarock,Apartment,1,1,495,4619812,,https://example.com/property/104,2026-02-12
+PropertyPro,B0105,4BR Townhouse in Syokimau,Syokimau,Townhouse,4,3,2163,12606963,,https://example.com/property/105,2026-01-24
+DiamondTrust,C0106,3BR Villa in Embakasi,Embakasi,Villa,3,2,2604,8034830,,https://example.com/property/106,2026-02-11
+BuyRentKenya,D0107,3BR Villa in Syokimau,Syokimau,Villa,3,2,2195,10806079,cctv|internet|lift,https://example.com/property/107,2026-02-18
+BuyRentKenya,E0108,4BR Villa in Komarock,Komarock,Villa,4,4,3530,7187581,pool|furnished,https://example.com/property/108,2026-02-01
+PropertyPro,F0109,3BR Townhouse in Komarock,Komarock,Townhouse,3,2,1743,9475058,,https://example.com/property/109,2026-01-24
+BuyRentKenya,G0110,3BR Bungalow in Langata,Langata,Bungalow,3,3,2217,14433408,,https://example.com/property/110,2026-02-09
+PropertyPro,H0111,3BR Bungalow in Kilimani,Kilimani,Bungalow,3,3,2152,42466545,generator|parking|security,https://example.com/property/111,2026-01-22
+DiamondTrust,I0112,1BR Apartment in Runda,Runda,Apartment,1,2,452,92249722,,https://example.com/property/112,2026-02-08
+DiamondTrust,J0113,2BR Villa in Kileleshwa,Kileleshwa,Villa,2,1,1259,13442854,balcony|parking,https://example.com/property/113,2026-01-29
+DiamondTrust,K0114,2BR Villa in Komarock,Komarock,Villa,2,1,1044,10592008,,https://example.com/property/114,2026-02-14
+DiamondTrust,L0115,2BR Townhouse in Thika Road,Thika Road,Townhouse,2,2,861,10521351,internet|cctv|parking,https://example.com/property/115,2026-02-17
+DiamondTrust,M0116,2BR Apartment in Buruburu,Buruburu,Apartment,2,2,968,12532155,,https://example.com/property/116,2026-01-31
+PropertyPro,N0117,1BR Townhouse in Donholm,Donholm,Townhouse,1,2,1184,4109984,lift|pool,https://example.com/property/117,2026-01-25
+BuyRentKenya,O0118,2BR Villa in Langata,Langata,Villa,2,1,904,28744797,furnished|gym|security,https://example.com/property/118,2026-02-05
+PropertyPro,P0119,2BR Bungalow in Thika Road,Thika Road,Bungalow,2,1,1345,3176250,,https://example.com/property/119,2026-02-09
+DiamondTrust,Q0120,3BR House in Karen,Karen,House,3,2,1679,106707695,,https://example.com/property/120,2026-01-22
+PropertyPro,R0121,4BR Townhouse in Westlands,Westlands,Townhouse,4,4,1743,103752052,gym|generator|water|furnished,https://example.com/property/121,2026-02-05
+BuyRentKenya,S0122,3BR House in Thika Road,Thika Road,House,3,2,1776,6902896,internet|garden,https://example.com/property/122,2026-01-25
+PropertyPro,T0123,4BR Townhouse in Embakasi,Embakasi,Townhouse,4,4,2228,11039695,,https://example.com/property/123,2026-02-01
+DiamondTrust,U0124,2BR Townhouse in Parklands,Parklands,Townhouse,2,1,1259,17429920,playground|garden|balcony|pool,https://example.com/property/124,2026-02-16
+BuyRentKenya,V0125,2BR Bungalow in Buruburu,Buruburu,Bungalow,2,2,1840,12467291,balcony|pool|furnished,https://example.com/property/125,2026-01-24
+DiamondTrust,W0126,4BR Apartment in Kasarani,Kasarani,Apartment,4,4,1894,5768316,balcony|generator|water|gym|cctv,https://example.com/property/126,2026-01-23
+PropertyPro,X0127,2BR Townhouse in Kitengela,Kitengela,Townhouse,2,2,1205,14246119,garden|pool,https://example.com/property/127,2026-02-17
+DiamondTrust,Y0128,1BR Apartment in Kitengela,Kitengela,Apartment,1,1,505,6191887,garden|playground,https://example.com/property/128,2026-02-17
+PropertyPro,Z0129,2BR Villa in Ngong,Ngong,Villa,2,1,925,9247922,,https://example.com/property/129,2026-02-01
+DiamondTrust,A0130,2BR House in Kitengela,Kitengela,House,2,2,1399,14905415,internet|pool|gym,https://example.com/property/130,2026-02-15
+DiamondTrust,B0131,2BR House in Upper Hill,Upper Hill,House,2,1,1237,37936358,,https://example.com/property/131,2026-02-03
+DiamondTrust,C0132,4BR Apartment in Westlands,Westlands,Apartment,4,4,1797,31433717,internet|balcony|cctv|lift|furnished,https://example.com/property/132,2026-01-30
+DiamondTrust,D0133,3BR Apartment in Ngong,Ngong,Apartment,3,3,1334,8018055,,https://example.com/property/133,2026-02-12
+DiamondTrust,E0134,4BR House in Lavington,Lavington,House,4,3,2906,34652599,,https://example.com/property/134,2026-01-23
+DiamondTrust,F0135,4BR Villa in Thika Road,Thika Road,Villa,4,4,4488,4207506,,https://example.com/property/135,2026-02-09
+DiamondTrust,G0136,3BR Villa in Ngong,Ngong,Villa,3,2,2540,6776616,balcony|internet|water,https://example.com/property/136,2026-01-30
+PropertyPro,H0137,3BR Apartment in Embakasi,Embakasi,Apartment,3,3,1130,9465722,security|playground|balcony,https://example.com/property/137,2026-02-02
+DiamondTrust,I0138,3BR Apartment in Komarock,Komarock,Apartment,3,3,1291,17981294,furnished|parking,https://example.com/property/138,2026-02-08
+PropertyPro,J0139,3BR Apartment in Langata,Langata,Apartment,3,2,1453,28013838,gym|parking|pool|cctv,https://example.com/property/139,2026-01-30
+DiamondTrust,K0140,2BR Townhouse in Komarock,Komarock,Townhouse,2,1,1184,7787244,pool|balcony|parking,https://example.com/property/140,2026-01-25
+DiamondTrust,L0141,4BR Villa in Upper Hill,Upper Hill,Villa,4,4,3444,98437393,,https://example.com/property/141,2026-01-23
+PropertyPro,M0142,3BR Villa in Kitengela,Kitengela,Villa,3,2,2712,6297894,generator|gym,https://example.com/property/142,2026-02-07
+DiamondTrust,N0143,2BR House in Komarock,Komarock,House,2,2,1076,10290707,,https://example.com/property/143,2026-01-26
+BuyRentKenya,O0144,3BR Townhouse in Langata,Langata,Townhouse,3,2,1388,10378165,parking|security,https://example.com/property/144,2026-01-31
+DiamondTrust,P0145,2BR Townhouse in Westlands,Westlands,Townhouse,2,1,936,66877804,internet|furnished|parking|garden,https://example.com/property/145,2026-01-30
+PropertyPro,Q0146,2BR Townhouse in Buruburu,Buruburu,Townhouse,2,2,1140,9828246,,https://example.com/property/146,2026-02-18
+DiamondTrust,R0147,1BR Apartment in Ngong,Ngong,Apartment,1,2,602,16875609,garden|furnished,https://example.com/property/147,2026-02-13
+PropertyPro,S0148,3BR Apartment in Buruburu,Buruburu,Apartment,3,2,1474,7485273,playground|pool,https://example.com/property/148,2026-02-09
+PropertyPro,T0149,3BR Bungalow in Runda,Runda,Bungalow,3,2,2475,57007707,cctv|furnished,https://example.com/property/149,2026-02-13
+BuyRentKenya,U0150,1BR Townhouse in Ngong,Ngong,Townhouse,1,2,979,15479158,balcony|gym|pool|furnished,https://example.com/property/150,2026-02-02
+DiamondTrust,V0151,3BR Villa in Parklands,Parklands,Villa,3,2,2809,22843370,,https://example.com/property/151,2026-02-12
+BuyRentKenya,W0152,3BR Villa in Donholm,Donholm,Villa,3,3,3207,5365217,,https://example.com/property/152,2026-02-01
+BuyRentKenya,X0153,2BR House in Syokimau,Syokimau,House,2,1,1194,13220860,garden|generator|parking,https://example.com/property/153,2026-02-09
+BuyRentKenya,Y0154,2BR Townhouse in Embakasi,Embakasi,Townhouse,2,1,1151,5241024,furnished|balcony|gym|water,https://example.com/property/154,2026-02-14
+DiamondTrust,Z0155,3BR House in Lavington,Lavington,House,3,3,1754,42117079,balcony|internet|pool,https://example.com/property/155,2026-01-22
+PropertyPro,A0156,2BR House in Kasarani,Kasarani,House,2,1,1496,4143248,,https://example.com/property/156,2026-02-04
+DiamondTrust,B0157,1BR Townhouse in Kitengela,Kitengela,Townhouse,1,1,1205,4000000,generator|internet|playground|gym,https://example.com/property/157,2026-02-19
+BuyRentKenya,C0158,3BR Apartment in Syokimau,Syokimau,Apartment,3,3,1248,13830528,security|furnished|pool|cctv,https://example.com/property/158,2026-01-29
+BuyRentKenya,D0159,2BR Apartment in Syokimau,Syokimau,Apartment,2,2,785,11634148,internet|furnished|balcony|generator|pool,https://example.com/property/159,2026-02-05
+PropertyPro,E0160,3BR House in Komarock,Komarock,House,3,3,2034,8844293,,https://example.com/property/160,2026-02-01
+BuyRentKenya,F0161,3BR House in Parklands,Parklands,House,3,3,1743,23532712,lift|cctv|garden|furnished,https://example.com/property/161,2026-01-21
+BuyRentKenya,G0162,2BR Apartment in Buruburu,Buruburu,Apartment,2,2,979,3000000,lift|parking,https://example.com/property/162,2026-01-21
+PropertyPro,H0163,5BR Apartment in Kilimani,Kilimani,Apartment,5,4,1087,65839270,,https://example.com/property/163,2026-01-31
+BuyRentKenya,I0164,3BR House in Runda,Runda,House,3,3,1883,48769025,,https://example.com/property/164,2026-01-23
+PropertyPro,J0165,2BR Townhouse in Embakasi,Embakasi,Townhouse,2,2,1130,3125102,furnished|lift,https://example.com/property/165,2026-02-04
+DiamondTrust,K0166,4BR Apartment in Karen,Karen,Apartment,4,4,1431,56888220,security|balcony|gym|garden|parking,https://example.com/property/166,2026-01-30
+PropertyPro,L0167,5BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,5,5,1237,26529256,,https://example.com/property/167,2026-01-30
+DiamondTrust,M0168,4BR Bungalow in Kitengela,Kitengela,Bungalow,4,3,3519,23596725,,https://example.com/property/168,2026-01-28
+PropertyPro,N0169,3BR Apartment in Embakasi,Embakasi,Apartment,3,2,1162,9619139,parking|gym,https://example.com/property/169,2026-02-07
+BuyRentKenya,O0170,2BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,2,1,1205,30202786,,https://example.com/property/170,2026-01-28
+BuyRentKenya,P0171,2BR Townhouse in Thika Road,Thika Road,Townhouse,2,1,1216,12351855,playground|generator|lift|gym|internet,https://example.com/property/171,2026-02-13
+BuyRentKenya,Q0172,1BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,1,1,893,12000000,garden|furnished|generator|internet,https://example.com/property/172,2026-02-07
+PropertyPro,R0173,2BR Bungalow in Komarock,Komarock,Bungalow,2,1,1862,14735746,,https://example.com/property/173,2026-01-21
+DiamondTrust,S0174,3BR Bungalow in Komarock,Komarock,Bungalow,3,2,1808,15306849,garden|water|security|playground,https://example.com/property/174,2026-02-10
+PropertyPro,T0175,4BR House in Upper Hill,Upper Hill,House,4,3,2960,38984563,cctv|balcony|pool,https://example.com/property/175,2026-02-15
+BuyRentKenya,U0176,3BR Townhouse in Kasarani,Kasarani,Townhouse,3,3,1862,14947621,garden|lift|balcony|water|cctv,https://example.com/property/176,2026-01-28
+BuyRentKenya,V0177,1BR Townhouse in Kasarani,Kasarani,Townhouse,1,2,947,8874551,parking|lift|security,https://example.com/property/177,2026-02-18
+PropertyPro,W0178,2BR House in Kitengela,Kitengela,House,2,1,1194,6215718,playground|garden,https://example.com/property/178,2026-02-11
+BuyRentKenya,X0179,2BR Villa in Kilimani,Kilimani,Villa,2,1,904,46550169,parking|furnished|internet,https://example.com/property/179,2026-01-29
+PropertyPro,Y0180,3BR Villa in Embakasi,Embakasi,Villa,3,2,2357,10929313,,https://example.com/property/180,2026-01-20
+BuyRentKenya,Z0181,3BR House in Runda,Runda,House,3,3,2260,151396338,,https://example.com/property/181,2026-01-26
+DiamondTrust,A0182,3BR Apartment in Kasarani,Kasarani,Apartment,3,2,1345,3757499,cctv|furnished|playground|internet|security,https://example.com/property/182,2026-02-08
+BuyRentKenya,B0183,5BR House in Donholm,Donholm,House,5,4,3121,8569135,,https://example.com/property/183,2026-02-12
+DiamondTrust,C0184,2BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,2,2,904,10439140,,https://example.com/property/184,2026-02-05
+BuyRentKenya,D0185,4BR Villa in Kitengela,Kitengela,Villa,4,4,3132,13266420,security|parking,https://example.com/property/185,2026-02-15
+BuyRentKenya,E0186,4BR Bungalow in Langata,Langata,Bungalow,4,3,2701,12217685,,https://example.com/property/186,2026-02-08
+DiamondTrust,F0187,2BR House in Kasarani,Kasarani,House,2,1,1140,12952200,,https://example.com/property/187,2026-01-26
+PropertyPro,G0188,2BR House in Ngong,Ngong,House,2,2,1420,23347322,lift|furnished|security|balcony,https://example.com/property/188,2026-01-20
+PropertyPro,H0189,2BR House in Kilimani,Kilimani,House,2,2,1270,29251744,,https://example.com/property/189,2026-01-31
+BuyRentKenya,I0190,3BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,3,2,1862,25322942,water|cctv|garden,https://example.com/property/190,2026-02-01
+PropertyPro,J0191,3BR Bungalow in Syokimau,Syokimau,Bungalow,3,3,2551,14387123,,https://example.com/property/191,2026-01-22
+BuyRentKenya,K0192,3BR Apartment in Donholm,Donholm,Apartment,3,3,1280,9767762,water|security|lift|furnished,https://example.com/property/192,2026-01-31
+BuyRentKenya,L0193,2BR Villa in Thika Road,Thika Road,Villa,2,2,1076,4113043,,https://example.com/property/193,2026-02-01
+DiamondTrust,M0194,3BR Villa in Parklands,Parklands,Villa,3,3,2615,10194718,furnished|water,https://example.com/property/194,2026-01-29
+BuyRentKenya,N0195,3BR House in Embakasi,Embakasi,House,3,3,2303,5695062,cctv|security|water|lift,https://example.com/property/195,2026-02-08
+PropertyPro,O0196,2BR House in Kasarani,Kasarani,House,2,2,1184,3793657,,https://example.com/property/196,2026-01-26
+BuyRentKenya,P0197,4BR Villa in Kilimani,Kilimani,Villa,4,3,4068,71812610,,https://example.com/property/197,2026-02-06
+DiamondTrust,Q0198,2BR Bungalow in Lavington,Lavington,Bungalow,2,2,1776,20832883,gym|garden|water,https://example.com/property/198,2026-01-26
+PropertyPro,R0199,2BR Villa in Parklands,Parklands,Villa,2,1,1033,22231118,,https://example.com/property/199,2026-02-02
+DiamondTrust,S0200,2BR Apartment in Langata,Langata,Apartment,2,2,850,11926582,lift|security|internet|playground,https://example.com/property/200,2026-02-16
+BuyRentKenya,T0201,5BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,5,4,1011,71149810,parking|lift|playground,https://example.com/property/201,2026-01-23
+BuyRentKenya,U0202,2BR Apartment in Komarock,Komarock,Apartment,2,1,796,12034133,,https://example.com/property/202,2026-01-26
+BuyRentKenya,V0203,1BR Villa in Buruburu,Buruburu,Villa,1,1,1130,8768235,cctv|generator|gym|furnished,https://example.com/property/203,2026-02-12
+DiamondTrust,W0204,4BR House in Westlands,Westlands,House,4,4,2723,96420012,pool|parking|playground|balcony,https://example.com/property/204,2026-01-21
+BuyRentKenya,X0205,3BR Villa in Syokimau,Syokimau,Villa,3,2,2325,14762026,security|water|generator|gym,https://example.com/property/205,2026-02-02
+DiamondTrust,Y0206,2BR Villa in Komarock,Komarock,Villa,2,1,1140,14935457,gym|security|cctv,https://example.com/property/206,2026-02-09
+DiamondTrust,Z0207,2BR Apartment in Lavington,Lavington,Apartment,2,2,807,47908838,generator|furnished,https://example.com/property/207,2026-02-06
+PropertyPro,A0208,3BR Apartment in Buruburu,Buruburu,Apartment,3,2,1496,11211152,parking|water|garden|lift,https://example.com/property/208,2026-01-26
+BuyRentKenya,B0209,2BR House in Karen,Karen,House,2,2,1097,101224904,balcony|gym,https://example.com/property/209,2026-02-12
+PropertyPro,C0210,2BR House in Parklands,Parklands,House,2,1,1313,16225481,,https://example.com/property/210,2026-02-17
+PropertyPro,D0211,1BR House in Embakasi,Embakasi,House,1,2,1065,6567737,furnished|garden|lift,https://example.com/property/211,2026-01-25
+BuyRentKenya,E0212,2BR Villa in Kilimani,Kilimani,Villa,2,2,904,34834595,,https://example.com/property/212,2026-01-31
+BuyRentKenya,F0213,2BR House in Kilimani,Kilimani,House,2,1,1431,50989961,,https://example.com/property/213,2026-02-15
+DiamondTrust,G0214,2BR House in Parklands,Parklands,House,2,2,1323,21285599,,https://example.com/property/214,2026-02-11
+PropertyPro,H0215,2BR Villa in Donholm,Donholm,Villa,2,1,1173,7956462,,https://example.com/property/215,2026-01-28
+DiamondTrust,I0216,2BR Apartment in Kasarani,Kasarani,Apartment,2,1,925,13289617,water|furnished|internet,https://example.com/property/216,2026-01-28
+PropertyPro,J0217,4BR House in Kasarani,Kasarani,House,4,3,3175,14949694,,https://example.com/property/217,2026-01-20
+BuyRentKenya,K0218,2BR Townhouse in Westlands,Westlands,Townhouse,2,1,1001,63743364,,https://example.com/property/218,2026-01-26
+PropertyPro,L0219,2BR Bungalow in Westlands,Westlands,Bungalow,2,2,1603,35676810,,https://example.com/property/219,2026-01-22
+DiamondTrust,M0220,5BR Townhouse in Thika Road,Thika Road,Townhouse,5,4,1054,14264484,pool|balcony|internet|gym,https://example.com/property/220,2026-01-21
+DiamondTrust,N0221,1BR Villa in Syokimau,Syokimau,Villa,1,2,947,10219287,gym|water|playground,https://example.com/property/221,2026-02-12
+BuyRentKenya,O0222,1BR Bungalow in Upper Hill,Upper Hill,Bungalow,1,2,1065,24500934,,https://example.com/property/222,2026-02-11
+BuyRentKenya,P0223,4BR Apartment in Buruburu,Buruburu,Apartment,4,4,1377,7384938,,https://example.com/property/223,2026-02-05
+DiamondTrust,Q0224,3BR Townhouse in Langata,Langata,Townhouse,3,2,1463,9153002,,https://example.com/property/224,2026-01-30
+PropertyPro,R0225,2BR Townhouse in Upper Hill,Upper Hill,Townhouse,2,2,1280,70918598,balcony|gym|lift|garden|cctv,https://example.com/property/225,2026-02-05
+DiamondTrust,S0226,3BR Townhouse in Parklands,Parklands,Townhouse,3,2,1356,31796947,security|pool|garden,https://example.com/property/226,2026-02-15
+PropertyPro,T0227,2BR House in Ongata Rongai,Ongata Rongai,House,2,1,1431,7876264,,https://example.com/property/227,2026-01-27
+BuyRentKenya,U0228,5BR Villa in Parklands,Parklands,Villa,5,4,4983,48686817,security|balcony|water,https://example.com/property/228,2026-02-01
+PropertyPro,V0229,3BR Townhouse in Ongata Rongai,Ongata Rongai,Townhouse,3,3,1808,17716262,,https://example.com/property/229,2026-01-29
+DiamondTrust,W0230,2BR Townhouse in Ongata Rongai,Ongata Rongai,Townhouse,2,2,1140,5000000,,https://example.com/property/230,2026-02-08
+PropertyPro,X0231,3BR Bungalow in Kitengela,Kitengela,Bungalow,3,2,2561,11695887,pool|garden,https://example.com/property/231,2026-02-19
+PropertyPro,Y0232,1BR Villa in Donholm,Donholm,Villa,1,2,1140,9021295,,https://example.com/property/232,2026-02-11
+DiamondTrust,Z0233,4BR Villa in Parklands,Parklands,Villa,4,4,3993,14657484,garden|internet,https://example.com/property/233,2026-01-26
+BuyRentKenya,A0234,4BR Apartment in Syokimau,Syokimau,Apartment,4,4,1603,4658175,,https://example.com/property/234,2026-02-01
+BuyRentKenya,B0235,2BR Bungalow in Komarock,Komarock,Bungalow,2,2,1474,14917176,generator|garden|parking|internet,https://example.com/property/235,2026-01-26
+DiamondTrust,C0236,3BR Apartment in Embakasi,Embakasi,Apartment,3,2,1248,7477874,balcony|generator|water|playground|parking,https://example.com/property/236,2026-02-19
+BuyRentKenya,D0237,2BR House in Kileleshwa,Kileleshwa,House,2,2,1270,36601678,parking|gym|internet|furnished,https://example.com/property/237,2026-02-02
+BuyRentKenya,E0238,3BR Apartment in Thika Road,Thika Road,Apartment,3,3,1140,9566480,,https://example.com/property/238,2026-02-06
+PropertyPro,F0239,2BR Apartment in Komarock,Komarock,Apartment,2,1,818,9101566,,https://example.com/property/239,2026-02-11
+PropertyPro,G0240,2BR Bungalow in Lavington,Lavington,Bungalow,2,1,1636,34225187,gym|garden|pool,https://example.com/property/240,2026-01-27
+DiamondTrust,H0241,4BR Townhouse in Syokimau,Syokimau,Townhouse,4,3,1776,22196854,,https://example.com/property/241,2026-02-14
+BuyRentKenya,I0242,1BR Apartment in Upper Hill,Upper Hill,Apartment,1,2,570,49876170,,https://example.com/property/242,2026-01-20
+BuyRentKenya,J0243,2BR Villa in Langata,Langata,Villa,2,1,1065,9216400,cctv|furnished|gym,https://example.com/property/243,2026-02-14
+PropertyPro,K0244,2BR House in Runda,Runda,House,2,1,1345,117945707,,https://example.com/property/244,2026-02-11
+DiamondTrust,L0245,1BR Villa in Thika Road,Thika Road,Villa,1,2,1227,5679907,gym|cctv,https://example.com/property/245,2026-01-22
+PropertyPro,M0246,2BR Bungalow in Westlands,Westlands,Bungalow,2,2,1550,40439509,,https://example.com/property/246,2026-01-27
+PropertyPro,N0247,4BR Townhouse in Syokimau,Syokimau,Townhouse,4,3,2238,12520045,parking|gym|water|cctv|balcony,https://example.com/property/247,2026-02-04
+PropertyPro,O0248,2BR House in Komarock,Komarock,House,2,2,1431,3000000,,https://example.com/property/248,2026-02-10
+DiamondTrust,P0249,2BR Villa in Lavington,Lavington,Villa,2,2,947,30686271,,https://example.com/property/249,2026-02-01
+DiamondTrust,Q0250,4BR Villa in Parklands,Parklands,Villa,4,4,3336,42616181,playground|gym|garden|internet,https://example.com/property/250,2026-01-26
+DiamondTrust,R0251,4BR Villa in Upper Hill,Upper Hill,Villa,4,3,4047,42652529,balcony|garden|cctv,https://example.com/property/251,2026-02-07
+BuyRentKenya,S0252,3BR House in Lavington,Lavington,House,3,3,2195,53894323,security|parking|furnished|playground|garden,https://example.com/property/252,2026-02-16
+PropertyPro,T0253,1BR Townhouse in Kilimani,Kilimani,Townhouse,1,2,1097,25343915,parking|pool,https://example.com/property/253,2026-01-20
+DiamondTrust,U0254,2BR Bungalow in Kasarani,Kasarani,Bungalow,2,2,1582,5372727,,https://example.com/property/254,2026-02-06
+BuyRentKenya,V0255,2BR Bungalow in Kitengela,Kitengela,Bungalow,2,1,1388,6619172,,https://example.com/property/255,2026-02-03
+PropertyPro,W0256,3BR Villa in Lavington,Lavington,Villa,3,2,2637,43087060,parking|gym|security|cctv,https://example.com/property/256,2026-02-02
+BuyRentKenya,X0257,4BR Apartment in Westlands,Westlands,Apartment,4,3,1797,49625078,generator|internet|water,https://example.com/property/257,2026-02-05
+PropertyPro,Y0258,1BR Apartment in Donholm,Donholm,Apartment,1,1,570,10184594,playground|water|generator|internet,https://example.com/property/258,2026-01-26
+PropertyPro,Z0259,1BR House in Ongata Rongai,Ongata Rongai,House,1,2,893,6937239,internet|generator|playground|water,https://example.com/property/259,2026-01-25
+BuyRentKenya,A0260,2BR Bungalow in Kasarani,Kasarani,Bungalow,2,2,1679,4213233,pool|cctv,https://example.com/property/260,2026-01-23
+DiamondTrust,B0261,4BR Villa in Westlands,Westlands,Villa,4,4,3078,88379382,pool|playground|garden,https://example.com/property/261,2026-01-23
+PropertyPro,C0262,2BR Townhouse in Karen,Karen,Townhouse,2,2,1119,63287356,,https://example.com/property/262,2026-02-01
+BuyRentKenya,D0263,3BR Villa in Komarock,Komarock,Villa,3,2,2938,4753589,,https://example.com/property/263,2026-02-01
+DiamondTrust,E0264,4BR House in Ongata Rongai,Ongata Rongai,House,4,3,2518,9616669,,https://example.com/property/264,2026-02-09
+PropertyPro,F0265,2BR Apartment in Kasarani,Kasarani,Apartment,2,1,796,12355892,parking|security|furnished|gym,https://example.com/property/265,2026-02-04
+BuyRentKenya,G0266,3BR Apartment in Thika Road,Thika Road,Apartment,3,2,1323,7997704,parking|furnished|balcony|internet|garden,https://example.com/property/266,2026-01-27
+DiamondTrust,H0267,4BR Villa in Kasarani,Kasarani,Villa,4,4,4047,9516567,playground|lift|balcony|generator,https://example.com/property/267,2026-02-13
+DiamondTrust,I0268,3BR Apartment in Lavington,Lavington,Apartment,3,3,1065,45433518,,https://example.com/property/268,2026-01-28
+BuyRentKenya,J0269,3BR Bungalow in Komarock,Komarock,Bungalow,3,3,2281,5686522,furnished|internet|playground,https://example.com/property/269,2026-01-26
+BuyRentKenya,K0270,1BR Apartment in Syokimau,Syokimau,Apartment,1,1,516,5914996,,https://example.com/property/270,2026-02-16
+PropertyPro,L0271,1BR House in Kasarani,Kasarani,House,1,1,904,8935573,cctv|balcony,https://example.com/property/271,2026-02-09
+BuyRentKenya,M0272,3BR Bungalow in Westlands,Westlands,Bungalow,3,2,2281,34968777,,https://example.com/property/272,2026-01-24
+PropertyPro,N0273,2BR Apartment in Komarock,Komarock,Apartment,2,2,710,8992036,water|balcony,https://example.com/property/273,2026-01-26
+DiamondTrust,O0274,4BR Apartment in Karen,Karen,Apartment,4,3,1410,125164172,generator|gym|garden|pool|furnished,https://example.com/property/274,2026-01-27
+PropertyPro,P0275,2BR Villa in Syokimau,Syokimau,Villa,2,2,1270,3602830,lift|balcony|security|generator,https://example.com/property/275,2026-02-17
+PropertyPro,Q0276,5BR Bungalow in Parklands,Parklands,Bungalow,5,5,1173,35153308,,https://example.com/property/276,2026-02-12
+PropertyPro,R0277,2BR Villa in Parklands,Parklands,Villa,2,1,1259,26093097,,https://example.com/property/277,2026-02-12
+PropertyPro,S0278,2BR Townhouse in Langata,Langata,Townhouse,2,2,1162,13543447,,https://example.com/property/278,2026-02-09
+DiamondTrust,T0279,3BR House in Westlands,Westlands,House,3,2,2066,19597739,,https://example.com/property/279,2026-02-01
+BuyRentKenya,U0280,1BR Apartment in Kilimani,Kilimani,Apartment,1,2,592,27888550,,https://example.com/property/280,2026-02-13
+PropertyPro,V0281,3BR Villa in Kasarani,Kasarani,Villa,3,3,2346,10887890,furnished|pool,https://example.com/property/281,2026-02-02
+PropertyPro,W0282,3BR Villa in Donholm,Donholm,Villa,3,2,3175,11553414,lift|security|internet|water|pool,https://example.com/property/282,2026-01-28
+PropertyPro,X0283,3BR Villa in Donholm,Donholm,Villa,3,3,2152,16594830,,https://example.com/property/283,2026-01-27
+BuyRentKenya,Y0284,3BR Apartment in Ngong,Ngong,Apartment,3,3,1097,28158329,,https://example.com/property/284,2026-02-17
+BuyRentKenya,Z0285,2BR Townhouse in Kitengela,Kitengela,Townhouse,2,2,1259,12079500,balcony|internet,https://example.com/property/285,2026-01-24
+PropertyPro,A0286,1BR Townhouse in Kasarani,Kasarani,Townhouse,1,1,936,4256788,pool|furnished|generator|gym|balcony,https://example.com/property/286,2026-01-20
+BuyRentKenya,B0287,2BR Villa in Upper Hill,Upper Hill,Villa,2,1,1108,39951369,internet|water|garden|generator,https://example.com/property/287,2026-02-19
+BuyRentKenya,C0288,1BR Apartment in Embakasi,Embakasi,Apartment,1,2,462,5331754,,https://example.com/property/288,2026-02-12
+PropertyPro,D0289,3BR Townhouse in Embakasi,Embakasi,Townhouse,3,2,1463,3654079,playground|security|generator|furnished|water,https://example.com/property/289,2026-02-01
+BuyRentKenya,E0290,2BR Apartment in Westlands,Westlands,Apartment,2,1,968,34090761,playground|garden|security|gym,https://example.com/property/290,2026-02-17
+PropertyPro,F0291,2BR House in Parklands,Parklands,House,2,2,1431,14429356,security|parking|internet|lift,https://example.com/property/291,2026-01-21
+DiamondTrust,G0292,3BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,3,2,1733,36110499,,https://example.com/property/292,2026-02-02
+DiamondTrust,H0293,2BR Townhouse in Syokimau,Syokimau,Townhouse,2,2,979,12570021,generator|internet|lift|garden|balcony,https://example.com/property/293,2026-02-08
+BuyRentKenya,I0294,3BR House in Kileleshwa,Kileleshwa,House,3,3,1582,19913263,lift|security|balcony,https://example.com/property/294,2026-02-10
+BuyRentKenya,J0295,3BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,3,2,2475,38731248,,https://example.com/property/295,2026-01-30
+DiamondTrust,K0296,3BR Apartment in Kasarani,Kasarani,Apartment,3,3,1076,3803980,,https://example.com/property/296,2026-02-14
+DiamondTrust,L0297,4BR House in Ngong,Ngong,House,4,4,2691,14863151,gym|internet|garden,https://example.com/property/297,2026-02-05
+DiamondTrust,M0298,2BR House in Embakasi,Embakasi,House,2,2,1463,3065601,pool|playground|security|water,https://example.com/property/298,2026-02-01
+PropertyPro,N0299,3BR House in Langata,Langata,House,3,2,1571,27364135,playground|pool|security|internet|balcony,https://example.com/property/299,2026-02-15
+DiamondTrust,O0300,2BR Apartment in Langata,Langata,Apartment,2,1,699,26139298,,https://example.com/property/300,2026-02-15
+PropertyPro,P0301,1BR Bungalow in Upper Hill,Upper Hill,Bungalow,1,2,1248,20669842,,https://example.com/property/301,2026-02-19
+DiamondTrust,Q0302,4BR Villa in Ngong,Ngong,Villa,4,3,3875,11428165,playground|pool|lift|security,https://example.com/property/302,2026-01-30
+DiamondTrust,R0303,4BR Apartment in Ngong,Ngong,Apartment,4,3,1367,33921373,,https://example.com/property/303,2026-02-12
+BuyRentKenya,S0304,2BR Villa in Upper Hill,Upper Hill,Villa,2,2,1151,81977181,garden|balcony|parking|furnished,https://example.com/property/304,2026-02-19
+BuyRentKenya,T0305,1BR Bungalow in Karen,Karen,Bungalow,1,1,1044,26536464,,https://example.com/property/305,2026-02-15
+PropertyPro,U0306,3BR Villa in Thika Road,Thika Road,Villa,3,3,2152,7994713,internet|garden,https://example.com/property/306,2026-01-20
+PropertyPro,V0307,4BR Apartment in Syokimau,Syokimau,Apartment,4,3,1399,5639502,,https://example.com/property/307,2026-02-07
+PropertyPro,W0308,4BR Villa in Runda,Runda,Villa,4,3,3035,168691431,balcony|parking|pool,https://example.com/property/308,2026-02-12
+DiamondTrust,X0309,3BR Villa in Komarock,Komarock,Villa,3,2,2443,12897600,playground|furnished|security|lift|internet,https://example.com/property/309,2026-02-08
+DiamondTrust,Y0310,3BR House in Kileleshwa,Kileleshwa,House,3,2,2077,41434313,,https://example.com/property/310,2026-01-30
+PropertyPro,Z0311,4BR Villa in Runda,Runda,Villa,4,4,4499,182304688,garden|pool|internet|balcony,https://example.com/property/311,2026-01-25
+DiamondTrust,A0312,3BR Townhouse in Ngong,Ngong,Townhouse,3,3,1442,20969600,,https://example.com/property/312,2026-02-10
+PropertyPro,B0313,5BR Bungalow in Langata,Langata,Bungalow,5,4,893,42014599,cctv|parking|water,https://example.com/property/313,2026-02-10
+BuyRentKenya,C0314,2BR Villa in Kasarani,Kasarani,Villa,2,1,1151,4791487,security|gym,https://example.com/property/314,2026-02-04
+DiamondTrust,D0315,2BR Townhouse in Runda,Runda,Townhouse,2,2,957,107268410,security|cctv|gym|balcony,https://example.com/property/315,2026-02-16
+PropertyPro,E0316,3BR Apartment in Kitengela,Kitengela,Apartment,3,2,1194,13421009,security|gym|lift|cctv,https://example.com/property/316,2026-02-14
+DiamondTrust,F0317,2BR Villa in Lavington,Lavington,Villa,2,2,1044,33168988,,https://example.com/property/317,2026-02-12
+DiamondTrust,G0318,3BR House in Kasarani,Kasarani,House,3,2,2077,13333849,cctv|security|playground,https://example.com/property/318,2026-01-26
+DiamondTrust,H0319,3BR House in Kilimani,Kilimani,House,3,2,2023,34257085,security|internet|pool|water|playground,https://example.com/property/319,2026-02-06
+BuyRentKenya,I0320,1BR Townhouse in Kilimani,Kilimani,Townhouse,1,2,1194,15000000,cctv|garden|internet|generator,https://example.com/property/320,2026-01-29
+BuyRentKenya,J0321,1BR Townhouse in Parklands,Parklands,Townhouse,1,1,1205,10000000,,https://example.com/property/321,2026-02-13
+BuyRentKenya,K0322,3BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,3,2,2185,20769691,,https://example.com/property/322,2026-01-25
+PropertyPro,L0323,3BR Bungalow in Donholm,Donholm,Bungalow,3,3,1991,8453318,,https://example.com/property/323,2026-02-01
+DiamondTrust,M0324,4BR Apartment in Upper Hill,Upper Hill,Apartment,4,3,1915,81596427,gym|parking|generator|water|garden,https://example.com/property/324,2026-02-05
+DiamondTrust,N0325,3BR Apartment in Donholm,Donholm,Apartment,3,3,1463,16302861,parking|generator|water|balcony|garden,https://example.com/property/325,2026-02-09
+PropertyPro,O0326,3BR Townhouse in Lavington,Lavington,Townhouse,3,2,1711,28024528,lift|playground|pool|garden,https://example.com/property/326,2026-02-08
+BuyRentKenya,P0327,3BR House in Kileleshwa,Kileleshwa,House,3,2,2066,35022613,,https://example.com/property/327,2026-02-15
+BuyRentKenya,Q0328,3BR Apartment in Langata,Langata,Apartment,3,2,1485,24087059,balcony|generator|pool|gym|cctv,https://example.com/property/328,2026-01-20
+DiamondTrust,R0329,3BR Bungalow in Syokimau,Syokimau,Bungalow,3,3,2368,11408653,generator|gym|parking,https://example.com/property/329,2026-01-24
+PropertyPro,S0330,3BR Apartment in Syokimau,Syokimau,Apartment,3,2,1334,17679735,cctv|lift|playground|security,https://example.com/property/330,2026-02-17
+DiamondTrust,T0331,1BR Bungalow in Kilimani,Kilimani,Bungalow,1,2,1216,15000000,security|furnished|water,https://example.com/property/331,2026-02-13
+DiamondTrust,U0332,3BR House in Ngong,Ngong,House,3,3,2120,8696755,gym|security|balcony,https://example.com/property/332,2026-02-04
+DiamondTrust,V0333,2BR House in Langata,Langata,House,2,1,1410,13673849,gym|garden|balcony,https://example.com/property/333,2026-02-16
+PropertyPro,W0334,2BR House in Karen,Karen,House,2,1,1474,93181831,parking|generator|water,https://example.com/property/334,2026-01-28
+BuyRentKenya,X0335,2BR House in Upper Hill,Upper Hill,House,2,1,1410,81825721,,https://example.com/property/335,2026-02-05
+PropertyPro,Y0336,3BR Villa in Parklands,Parklands,Villa,3,3,2572,25942801,,https://example.com/property/336,2026-01-26
+DiamondTrust,Z0337,4BR House in Buruburu,Buruburu,House,4,3,2626,6899742,security|garden,https://example.com/property/337,2026-02-19
+PropertyPro,A0338,2BR Apartment in Embakasi,Embakasi,Apartment,2,1,871,8532419,pool|lift,https://example.com/property/338,2026-02-12
+DiamondTrust,B0339,4BR Bungalow in Thika Road,Thika Road,Bungalow,4,4,3864,6975992,pool|furnished|garden,https://example.com/property/339,2026-02-08
+BuyRentKenya,C0340,3BR Villa in Ngong,Ngong,Villa,3,2,2777,15457417,playground|parking|furnished|internet,https://example.com/property/340,2026-01-26
+DiamondTrust,D0341,2BR House in Ngong,Ngong,House,2,2,1410,21974173,security|playground,https://example.com/property/341,2026-01-27
+BuyRentKenya,E0342,2BR House in Ongata Rongai,Ongata Rongai,House,2,2,1237,5226245,cctv|water,https://example.com/property/342,2026-02-14
+DiamondTrust,F0343,3BR Bungalow in Komarock,Komarock,Bungalow,3,3,1765,14920452,parking|water|pool|gym,https://example.com/property/343,2026-01-29
+DiamondTrust,G0344,3BR Townhouse in Donholm,Donholm,Townhouse,3,3,1636,13808891,parking|gym,https://example.com/property/344,2026-01-29
+BuyRentKenya,H0345,4BR Bungalow in Kasarani,Kasarani,Bungalow,4,3,3713,13371947,parking|internet,https://example.com/property/345,2026-02-16
+BuyRentKenya,I0346,2BR Bungalow in Runda,Runda,Bungalow,2,1,1829,163238468,cctv|parking,https://example.com/property/346,2026-02-19
+BuyRentKenya,J0347,1BR Villa in Thika Road,Thika Road,Villa,1,2,1033,8875154,,https://example.com/property/347,2026-01-29
+PropertyPro,K0348,4BR Bungalow in Thika Road,Thika Road,Bungalow,4,4,3595,15463849,cctv|parking|pool|security,https://example.com/property/348,2026-02-03
+BuyRentKenya,L0349,1BR Townhouse in Embakasi,Embakasi,Townhouse,1,2,979,4768766,,https://example.com/property/349,2026-02-16
+BuyRentKenya,M0350,2BR House in Syokimau,Syokimau,House,2,1,1323,7494006,security|cctv|pool,https://example.com/property/350,2026-01-27
+BuyRentKenya,N0351,5BR House in Donholm,Donholm,House,5,4,4477,28644555,pool|generator|security,https://example.com/property/351,2026-01-22
+PropertyPro,O0352,2BR House in Embakasi,Embakasi,House,2,2,1270,4288398,,https://example.com/property/352,2026-02-04
+PropertyPro,P0353,3BR Apartment in Parklands,Parklands,Apartment,3,2,1162,35358656,furnished|gym|generator|garden,https://example.com/property/353,2026-01-21
+DiamondTrust,Q0354,4BR House in Kilimani,Kilimani,House,4,3,2346,65705455,cctv|gym|water|internet,https://example.com/property/354,2026-02-01
+BuyRentKenya,R0355,1BR House in Thika Road,Thika Road,House,1,2,1001,6718244,,https://example.com/property/355,2026-02-09
+BuyRentKenya,S0356,4BR Townhouse in Karen,Karen,Townhouse,4,4,2120,153824202,,https://example.com/property/356,2026-02-11
+PropertyPro,T0357,4BR Apartment in Ngong,Ngong,Apartment,4,4,1302,22716950,,https://example.com/property/357,2026-02-16
+PropertyPro,U0358,3BR Villa in Donholm,Donholm,Villa,3,3,2281,7392584,furnished|garden,https://example.com/property/358,2026-02-16
+BuyRentKenya,V0359,2BR House in Ongata Rongai,Ongata Rongai,House,2,1,1270,17336638,cctv|pool|garden|security,https://example.com/property/359,2026-02-16
+PropertyPro,W0360,1BR Townhouse in Lavington,Lavington,Townhouse,1,2,1270,26467661,cctv|pool|furnished,https://example.com/property/360,2026-02-01
+BuyRentKenya,X0361,5BR Bungalow in Westlands,Westlands,Bungalow,5,4,1248,120000000,gym|pool,https://example.com/property/361,2026-01-26
+BuyRentKenya,Y0362,4BR House in Kileleshwa,Kileleshwa,House,4,3,3207,62434369,parking|furnished|pool|playground|internet,https://example.com/property/362,2026-02-03
+BuyRentKenya,Z0363,4BR Villa in Embakasi,Embakasi,Villa,4,4,4058,9116850,,https://example.com/property/363,2026-02-10
+BuyRentKenya,A0364,4BR Villa in Embakasi,Embakasi,Villa,4,4,4391,9192531,lift|cctv|security|playground,https://example.com/property/364,2026-01-25
+BuyRentKenya,B0365,3BR Townhouse in Donholm,Donholm,Townhouse,3,2,1808,13744390,playground|generator|lift,https://example.com/property/365,2026-02-18
+BuyRentKenya,C0366,3BR Townhouse in Embakasi,Embakasi,Townhouse,3,3,1872,3402614,security|garden|lift,https://example.com/property/366,2026-02-04
+PropertyPro,D0367,3BR Apartment in Kileleshwa,Kileleshwa,Apartment,3,2,1517,37528863,generator|water|garden|lift|pool,https://example.com/property/367,2026-02-05
+PropertyPro,E0368,3BR Bungalow in Kasarani,Kasarani,Bungalow,3,3,1797,10731837,security|gym|furnished|water|parking,https://example.com/property/368,2026-01-21
+DiamondTrust,F0369,2BR Bungalow in Komarock,Komarock,Bungalow,2,2,1323,13913321,,https://example.com/property/369,2026-01-30
+DiamondTrust,G0370,3BR Villa in Kitengela,Kitengela,Villa,3,3,2938,16328324,cctv|furnished|garden,https://example.com/property/370,2026-02-01
+DiamondTrust,H0371,2BR Villa in Kileleshwa,Kileleshwa,Villa,2,2,1162,24491019,,https://example.com/property/371,2026-02-12
+DiamondTrust,I0372,4BR Bungalow in Lavington,Lavington,Bungalow,4,4,2669,74366692,,https://example.com/property/372,2026-01-25
+BuyRentKenya,J0373,4BR Bungalow in Thika Road,Thika Road,Bungalow,4,4,2841,11002223,,https://example.com/property/373,2026-02-16
+PropertyPro,K0374,3BR Townhouse in Parklands,Parklands,Townhouse,3,2,1334,16226727,,https://example.com/property/374,2026-01-31
+BuyRentKenya,L0375,3BR House in Upper Hill,Upper Hill,House,3,3,2206,28895009,parking|pool|internet,https://example.com/property/375,2026-02-15
+DiamondTrust,M0376,2BR House in Buruburu,Buruburu,House,2,2,1431,3000000,,https://example.com/property/376,2026-01-25
+BuyRentKenya,N0377,1BR Townhouse in Lavington,Lavington,Townhouse,1,1,1054,26121661,,https://example.com/property/377,2026-02-14
+PropertyPro,O0378,3BR House in Komarock,Komarock,House,3,3,2109,5321538,parking|cctv,https://example.com/property/378,2026-02-06
+BuyRentKenya,P0379,2BR Villa in Runda,Runda,Villa,2,1,1140,61269338,,https://example.com/property/379,2026-02-19
+BuyRentKenya,Q0380,5BR House in Langata,Langata,House,5,4,3950,48976547,,https://example.com/property/380,2026-02-07
+PropertyPro,R0381,3BR Villa in Runda,Runda,Villa,3,3,2734,113208998,,https://example.com/property/381,2026-02-03
+DiamondTrust,S0382,2BR House in Kitengela,Kitengela,House,2,1,1410,16402923,,https://example.com/property/382,2026-01-28
+BuyRentKenya,T0383,3BR Apartment in Kileleshwa,Kileleshwa,Apartment,3,3,1280,49261196,,https://example.com/property/383,2026-02-03
+PropertyPro,U0384,3BR House in Donholm,Donholm,House,3,2,1937,7775488,,https://example.com/property/384,2026-01-31
+PropertyPro,V0385,3BR Bungalow in Lavington,Lavington,Bungalow,3,2,1851,24180313,security|cctv|balcony|internet|playground,https://example.com/property/385,2026-02-09
+BuyRentKenya,W0386,1BR Apartment in Komarock,Komarock,Apartment,1,2,613,9851639,playground|balcony|security|cctv|parking,https://example.com/property/386,2026-01-29
+BuyRentKenya,X0387,2BR Apartment in Upper Hill,Upper Hill,Apartment,2,1,710,77979004,,https://example.com/property/387,2026-02-16
+PropertyPro,Y0388,2BR Villa in Lavington,Lavington,Villa,2,2,914,45237149,gym|furnished|parking,https://example.com/property/388,2026-02-05
+DiamondTrust,Z0389,1BR Bungalow in Lavington,Lavington,Bungalow,1,1,861,14915021,,https://example.com/property/389,2026-01-27
+BuyRentKenya,A0390,4BR Bungalow in Donholm,Donholm,Bungalow,4,4,2917,20263741,parking|playground|furnished,https://example.com/property/390,2026-02-09
+PropertyPro,B0391,2BR Apartment in Langata,Langata,Apartment,2,2,775,12251741,generator|cctv|gym|furnished,https://example.com/property/391,2026-01-31
+DiamondTrust,C0392,3BR Townhouse in Syokimau,Syokimau,Townhouse,3,2,1560,11017710,garden|generator,https://example.com/property/392,2026-02-11
+PropertyPro,D0393,2BR Apartment in Lavington,Lavington,Apartment,2,2,796,49917710,cctv|parking|generator|internet|gym,https://example.com/property/393,2026-02-19
+BuyRentKenya,E0394,2BR Apartment in Kilimani,Kilimani,Apartment,2,2,893,36939485,generator|security|parking|furnished|cctv,https://example.com/property/394,2026-02-01
+PropertyPro,F0395,2BR House in Langata,Langata,House,2,1,1087,8000000,parking|generator,https://example.com/property/395,2026-02-15
+DiamondTrust,G0396,3BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,3,2,2098,42525263,internet|lift,https://example.com/property/396,2026-02-03
+DiamondTrust,H0397,3BR Villa in Langata,Langata,Villa,3,2,2852,13667005,garden|generator,https://example.com/property/397,2026-01-20
+BuyRentKenya,I0398,2BR House in Buruburu,Buruburu,House,2,1,1076,3825969,parking|internet|furnished|generator|garden,https://example.com/property/398,2026-01-22
+PropertyPro,J0399,3BR Apartment in Donholm,Donholm,Apartment,3,3,1356,16721830,parking|internet|lift|security,https://example.com/property/399,2026-02-04
+DiamondTrust,K0400,2BR Apartment in Embakasi,Embakasi,Apartment,2,2,1022,4691767,generator|internet|balcony|garden|pool,https://example.com/property/400,2026-02-11
+DiamondTrust,L0401,1BR Apartment in Embakasi,Embakasi,Apartment,1,1,462,2500000,balcony|lift|internet|generator,https://example.com/property/401,2026-02-04
+BuyRentKenya,M0402,4BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,4,4,3659,21734689,generator|garden|gym|cctv,https://example.com/property/402,2026-01-26
+DiamondTrust,N0403,2BR House in Thika Road,Thika Road,House,2,1,1442,8911467,parking|water|cctv,https://example.com/property/403,2026-02-09
+PropertyPro,O0404,1BR House in Ongata Rongai,Ongata Rongai,House,1,2,1087,13557530,furnished|generator|playground|internet,https://example.com/property/404,2026-01-29
+PropertyPro,P0405,2BR Apartment in Embakasi,Embakasi,Apartment,2,1,979,5333166,,https://example.com/property/405,2026-01-25
+BuyRentKenya,Q0406,3BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,3,3,2400,46633244,,https://example.com/property/406,2026-02-15
+BuyRentKenya,R0407,1BR Villa in Thika Road,Thika Road,Villa,1,2,914,4757236,security|balcony|pool,https://example.com/property/407,2026-02-09
+PropertyPro,S0408,1BR House in Donholm,Donholm,House,1,2,979,4261990,,https://example.com/property/408,2026-02-05
+BuyRentKenya,T0409,2BR Villa in Runda,Runda,Villa,2,1,1044,82439798,,https://example.com/property/409,2026-02-13
+DiamondTrust,U0410,4BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,4,4,2777,48018362,,https://example.com/property/410,2026-02-14
+BuyRentKenya,V0411,1BR Townhouse in Buruburu,Buruburu,Townhouse,1,2,1044,7218939,cctv|playground|internet|balcony|lift,https://example.com/property/411,2026-02-04
+BuyRentKenya,W0412,1BR Villa in Ongata Rongai,Ongata Rongai,Villa,1,1,871,12576089,security|water|gym,https://example.com/property/412,2026-02-06
+DiamondTrust,X0413,1BR Apartment in Parklands,Parklands,Apartment,1,1,581,23225562,,https://example.com/property/413,2026-02-15
+DiamondTrust,Y0414,3BR House in Kasarani,Kasarani,House,3,3,2292,13043776,garden|playground,https://example.com/property/414,2026-02-15
+DiamondTrust,Z0415,3BR Townhouse in Syokimau,Syokimau,Townhouse,3,2,1323,4602015,,https://example.com/property/415,2026-02-10
+PropertyPro,A0416,2BR House in Ngong,Ngong,House,2,2,1420,6773161,generator|pool,https://example.com/property/416,2026-01-29
+PropertyPro,B0417,3BR Villa in Kilimani,Kilimani,Villa,3,3,2378,42132279,garden|water|pool|security|gym,https://example.com/property/417,2026-02-05
+DiamondTrust,C0418,2BR Villa in Ngong,Ngong,Villa,2,1,925,15449754,,https://example.com/property/418,2026-02-14
+PropertyPro,D0419,4BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,4,4,2766,42528153,,https://example.com/property/419,2026-01-25
+DiamondTrust,E0420,4BR Villa in Embakasi,Embakasi,Villa,4,3,4208,9683718,pool|furnished,https://example.com/property/420,2026-01-28
+DiamondTrust,F0421,3BR Villa in Kasarani,Kasarani,Villa,3,3,3035,13139005,,https://example.com/property/421,2026-01-27
+PropertyPro,G0422,4BR House in Karen,Karen,House,4,4,2938,76188116,,https://example.com/property/422,2026-01-20
+PropertyPro,H0423,3BR Villa in Kileleshwa,Kileleshwa,Villa,3,2,2809,17004243,generator|security,https://example.com/property/423,2026-02-13
+BuyRentKenya,I0424,5BR Bungalow in Karen,Karen,Bungalow,5,5,1022,74566685,furnished|parking|cctv|internet,https://example.com/property/424,2026-01-24
+PropertyPro,J0425,2BR Townhouse in Ngong,Ngong,Townhouse,2,1,1130,19906978,parking|pool|cctv|gym,https://example.com/property/425,2026-02-05
+DiamondTrust,K0426,2BR Villa in Kasarani,Kasarani,Villa,2,2,1151,13490133,,https://example.com/property/426,2026-02-07
+BuyRentKenya,L0427,3BR Apartment in Karen,Karen,Apartment,3,2,1431,25849717,,https://example.com/property/427,2026-02-06
+PropertyPro,M0428,1BR Townhouse in Lavington,Lavington,Townhouse,1,2,968,37998329,lift|cctv|furnished|water,https://example.com/property/428,2026-01-27
+DiamondTrust,N0429,2BR Apartment in Thika Road,Thika Road,Apartment,2,1,807,8695631,gym|generator|water|security,https://example.com/property/429,2026-02-06
+PropertyPro,O0430,3BR Apartment in Thika Road,Thika Road,Apartment,3,3,1216,7955598,lift|playground|water|parking|cctv,https://example.com/property/430,2026-02-13
+BuyRentKenya,P0431,2BR Townhouse in Runda,Runda,Townhouse,2,1,1173,73833537,lift|furnished|cctv,https://example.com/property/431,2026-01-29
+BuyRentKenya,Q0432,5BR House in Kileleshwa,Kileleshwa,House,5,5,3283,45295882,,https://example.com/property/432,2026-01-20
+PropertyPro,R0433,3BR Townhouse in Upper Hill,Upper Hill,Townhouse,3,2,1323,94574759,balcony|internet,https://example.com/property/433,2026-01-28
+PropertyPro,S0434,2BR Apartment in Lavington,Lavington,Apartment,2,2,742,46676430,generator|gym,https://example.com/property/434,2026-01-26
+PropertyPro,T0435,3BR Villa in Kasarani,Kasarani,Villa,3,2,2841,14759276,,https://example.com/property/435,2026-02-01
+BuyRentKenya,U0436,2BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,2,2,968,6275437,,https://example.com/property/436,2026-01-31
+BuyRentKenya,V0437,2BR Villa in Buruburu,Buruburu,Villa,2,2,861,12020543,,https://example.com/property/437,2026-01-23
+DiamondTrust,W0438,3BR House in Runda,Runda,House,3,2,2142,157900953,,https://example.com/property/438,2026-02-08
+DiamondTrust,X0439,2BR Bungalow in Langata,Langata,Bungalow,2,1,1808,13730667,furnished|lift|water,https://example.com/property/439,2026-02-07
+DiamondTrust,Y0440,2BR Townhouse in Lavington,Lavington,Townhouse,2,1,1130,51509245,gym|balcony,https://example.com/property/440,2026-02-11
+PropertyPro,Z0441,3BR Bungalow in Kasarani,Kasarani,Bungalow,3,2,1840,4767951,,https://example.com/property/441,2026-01-24
+DiamondTrust,A0442,3BR Townhouse in Upper Hill,Upper Hill,Townhouse,3,2,1765,78227651,,https://example.com/property/442,2026-02-15
+DiamondTrust,B0443,1BR Townhouse in Langata,Langata,Townhouse,1,2,947,8546923,,https://example.com/property/443,2026-02-18
+PropertyPro,C0444,3BR Villa in Westlands,Westlands,Villa,3,2,2400,31379428,generator|lift|internet|cctv|garden,https://example.com/property/444,2026-02-07
+BuyRentKenya,D0445,3BR House in Ngong,Ngong,House,3,3,1560,11905884,,https://example.com/property/445,2026-01-28
+BuyRentKenya,E0446,5BR Villa in Langata,Langata,Villa,5,5,4563,52500000,garden|pool|gym,https://example.com/property/446,2026-01-26
+DiamondTrust,F0447,2BR House in Kasarani,Kasarani,House,2,2,1173,6094729,,https://example.com/property/447,2026-02-18
+DiamondTrust,G0448,3BR Villa in Kasarani,Kasarani,Villa,3,3,2551,5207971,,https://example.com/property/448,2026-01-28
+DiamondTrust,H0449,2BR Apartment in Kileleshwa,Kileleshwa,Apartment,2,2,828,29398314,balcony|parking|furnished|internet|pool,https://example.com/property/449,2026-01-26
+BuyRentKenya,I0450,1BR Townhouse in Embakasi,Embakasi,Townhouse,1,2,1162,5698948,,https://example.com/property/450,2026-02-02
+PropertyPro,J0451,2BR Villa in Kitengela,Kitengela,Villa,2,2,968,10525236,,https://example.com/property/451,2026-02-12
+BuyRentKenya,K0452,2BR House in Karen,Karen,House,2,2,1410,102677656,,https://example.com/property/452,2026-01-21
+PropertyPro,L0453,2BR Apartment in Langata,Langata,Apartment,2,2,699,12186543,balcony|garden|gym|lift,https://example.com/property/453,2026-02-10
+DiamondTrust,M0454,2BR House in Lavington,Lavington,House,2,1,1431,44082361,security|pool|furnished|generator,https://example.com/property/454,2026-02-10
+BuyRentKenya,N0455,3BR Apartment in Komarock,Komarock,Apartment,3,2,1216,3499296,garden|generator|parking|pool,https://example.com/property/455,2026-02-03
+BuyRentKenya,O0456,3BR Apartment in Syokimau,Syokimau,Apartment,3,2,1334,6158134,water|playground|garden,https://example.com/property/456,2026-01-28
+BuyRentKenya,P0457,4BR House in Kilimani,Kilimani,House,4,3,2734,46326251,,https://example.com/property/457,2026-02-02
+PropertyPro,Q0458,3BR Villa in Syokimau,Syokimau,Villa,3,2,2852,3746480,garden|parking|water|lift|gym,https://example.com/property/458,2026-02-18
+DiamondTrust,R0459,2BR Bungalow in Parklands,Parklands,Bungalow,2,2,1679,12527595,,https://example.com/property/459,2026-02-02
+PropertyPro,S0460,3BR Villa in Kilimani,Kilimani,Villa,3,2,2325,40416640,,https://example.com/property/460,2026-02-03
+BuyRentKenya,T0461,2BR Apartment in Lavington,Lavington,Apartment,2,2,828,32644327,,https://example.com/property/461,2026-02-11
+DiamondTrust,U0462,2BR Bungalow in Kitengela,Kitengela,Bungalow,2,1,1485,11382468,,https://example.com/property/462,2026-02-13
+PropertyPro,V0463,1BR Townhouse in Donholm,Donholm,Townhouse,1,2,1140,5694241,,https://example.com/property/463,2026-01-20
+BuyRentKenya,W0464,2BR Bungalow in Donholm,Donholm,Bungalow,2,2,1915,10771223,security|parking|gym,https://example.com/property/464,2026-02-02
+BuyRentKenya,X0465,4BR Apartment in Upper Hill,Upper Hill,Apartment,4,4,1765,31340087,furnished|lift|garden|parking|generator,https://example.com/property/465,2026-01-23
+PropertyPro,Y0466,2BR House in Ngong,Ngong,House,2,1,1227,18168419,gym|internet|pool|lift|cctv,https://example.com/property/466,2026-02-05
+PropertyPro,Z0467,4BR Bungalow in Ngong,Ngong,Bungalow,4,3,2917,37977552,water|furnished|parking|cctv,https://example.com/property/467,2026-02-13
+PropertyPro,A0468,3BR Villa in Karen,Karen,Villa,3,3,2766,44845060,cctv|parking,https://example.com/property/468,2026-02-18
+PropertyPro,B0469,1BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,1,2,914,12000000,balcony|water|furnished,https://example.com/property/469,2026-02-01
+BuyRentKenya,C0470,3BR House in Lavington,Lavington,House,3,2,2292,38330697,gym|parking|lift|pool,https://example.com/property/470,2026-02-03
+PropertyPro,D0471,3BR Villa in Thika Road,Thika Road,Villa,3,3,2195,10919380,,https://example.com/property/471,2026-02-05
+BuyRentKenya,E0472,3BR Bungalow in Upper Hill,Upper Hill,Bungalow,3,3,2066,94554847,,https://example.com/property/472,2026-02-16
+DiamondTrust,F0473,1BR Apartment in Upper Hill,Upper Hill,Apartment,1,1,592,53966093,generator|pool,https://example.com/property/473,2026-01-29
+BuyRentKenya,G0474,1BR Townhouse in Kitengela,Kitengela,Townhouse,1,1,1216,7878620,,https://example.com/property/474,2026-02-12
+BuyRentKenya,H0475,4BR Townhouse in Parklands,Parklands,Townhouse,4,4,2228,43122655,balcony|security|generator,https://example.com/property/475,2026-01-28
+DiamondTrust,I0476,2BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,2,1,1356,17003583,,https://example.com/property/476,2026-02-08
+PropertyPro,J0477,2BR Bungalow in Donholm,Donholm,Bungalow,2,1,1625,4017124,,https://example.com/property/477,2026-01-28
+BuyRentKenya,K0478,4BR Bungalow in Lavington,Lavington,Bungalow,4,4,2820,66694987,,https://example.com/property/478,2026-02-01
+PropertyPro,L0479,2BR Townhouse in Embakasi,Embakasi,Townhouse,2,2,979,6879533,,https://example.com/property/479,2026-02-16
+DiamondTrust,M0480,3BR Apartment in Kitengela,Kitengela,Apartment,3,3,1044,5884937,,https://example.com/property/480,2026-02-19
+BuyRentKenya,N0481,3BR Bungalow in Thika Road,Thika Road,Bungalow,3,3,2012,13505767,security|internet,https://example.com/property/481,2026-01-25
+PropertyPro,O0482,3BR Bungalow in Kasarani,Kasarani,Bungalow,3,3,2508,14454640,,https://example.com/property/482,2026-02-13
+PropertyPro,P0483,1BR Apartment in Upper Hill,Upper Hill,Apartment,1,1,527,31620216,,https://example.com/property/483,2026-02-01
+PropertyPro,Q0484,2BR Bungalow in Kitengela,Kitengela,Bungalow,2,1,1743,9984514,parking|generator|cctv,https://example.com/property/484,2026-01-26
+DiamondTrust,R0485,2BR Apartment in Embakasi,Embakasi,Apartment,2,1,796,7938114,,https://example.com/property/485,2026-02-06
+BuyRentKenya,S0486,3BR Apartment in Thika Road,Thika Road,Apartment,3,3,1442,11826203,gym|furnished|internet|parking|security,https://example.com/property/486,2026-01-30
+DiamondTrust,T0487,4BR House in Embakasi,Embakasi,House,4,3,2637,3624791,generator|garden,https://example.com/property/487,2026-02-16
+DiamondTrust,U0488,4BR Bungalow in Donholm,Donholm,Bungalow,4,3,3164,20810609,,https://example.com/property/488,2026-02-17
+BuyRentKenya,V0489,5BR Villa in Westlands,Westlands,Villa,5,4,5672,106390114,balcony|cctv|water,https://example.com/property/489,2026-02-17
+DiamondTrust,W0490,3BR Apartment in Lavington,Lavington,Apartment,3,2,1205,61237567,gym|cctv,https://example.com/property/490,2026-02-12
+BuyRentKenya,X0491,3BR House in Donholm,Donholm,House,3,3,1915,12487149,,https://example.com/property/491,2026-02-01
+PropertyPro,Y0492,4BR Bungalow in Syokimau,Syokimau,Bungalow,4,4,3326,11224594,playground|security|water|generator,https://example.com/property/492,2026-02-16
+DiamondTrust,Z0493,2BR Bungalow in Kilimani,Kilimani,Bungalow,2,2,1345,47145742,gym|lift|water|security,https://example.com/property/493,2026-01-31
+BuyRentKenya,A0494,4BR Bungalow in Embakasi,Embakasi,Bungalow,4,3,3756,10427439,,https://example.com/property/494,2026-02-03
+DiamondTrust,B0495,2BR House in Donholm,Donholm,House,2,1,1313,10297232,security|pool|parking|garden,https://example.com/property/495,2026-01-29
+PropertyPro,C0496,1BR Apartment in Buruburu,Buruburu,Apartment,1,1,570,6295066,,https://example.com/property/496,2026-01-22
+BuyRentKenya,D0497,3BR Villa in Westlands,Westlands,Villa,3,2,2314,28999628,,https://example.com/property/497,2026-02-14
+BuyRentKenya,E0498,3BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,3,2,2292,24101060,water|parking|cctv|internet|generator,https://example.com/property/498,2026-02-17
+DiamondTrust,F0499,1BR Villa in Kileleshwa,Kileleshwa,Villa,1,1,1270,23381006,water|generator|gym|furnished|playground,https://example.com/property/499,2026-02-12
+DiamondTrust,G0500,2BR Villa in Kileleshwa,Kileleshwa,Villa,2,1,861,28172189,cctv|parking|water|playground,https://example.com/property/500,2026-02-15
+DiamondTrust,H0501,4BR Townhouse in Lavington,Lavington,Townhouse,4,4,2174,23428109,furnished|garden,https://example.com/property/501,2026-02-10
+DiamondTrust,I0502,3BR Townhouse in Kitengela,Kitengela,Townhouse,3,2,1474,6609255,gym|parking|internet|pool,https://example.com/property/502,2026-02-08
+PropertyPro,J0503,1BR Townhouse in Thika Road,Thika Road,Townhouse,1,2,1054,3740758,garden|water|lift|furnished,https://example.com/property/503,2026-02-06
+BuyRentKenya,K0504,4BR Bungalow in Kilimani,Kilimani,Bungalow,4,3,3745,19665915,,https://example.com/property/504,2026-01-28
+PropertyPro,L0505,2BR House in Lavington,Lavington,House,2,2,1194,30784491,,https://example.com/property/505,2026-01-31
+DiamondTrust,M0506,3BR Townhouse in Embakasi,Embakasi,Townhouse,3,2,1539,5102525,furnished|generator|security|garden,https://example.com/property/506,2026-02-03
+BuyRentKenya,N0507,2BR House in Syokimau,Syokimau,House,2,2,1323,13554725,cctv|generator|playground|pool,https://example.com/property/507,2026-02-08
+BuyRentKenya,O0508,3BR Bungalow in Ngong,Ngong,Bungalow,3,3,2174,6796798,internet|water|furnished,https://example.com/property/508,2026-01-22
+BuyRentKenya,P0509,2BR Villa in Embakasi,Embakasi,Villa,2,2,1130,3028697,furnished|playground,https://example.com/property/509,2026-02-11
+BuyRentKenya,Q0510,4BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,4,4,2927,22846805,lift|generator|security|furnished|cctv,https://example.com/property/510,2026-02-18
+PropertyPro,R0511,4BR Bungalow in Karen,Karen,Bungalow,4,3,2830,61061328,balcony|furnished|parking|water,https://example.com/property/511,2026-01-31
+DiamondTrust,S0512,2BR Apartment in Kasarani,Kasarani,Apartment,2,1,818,6085792,gym|balcony|parking,https://example.com/property/512,2026-02-02
+BuyRentKenya,T0513,4BR Townhouse in Thika Road,Thika Road,Townhouse,4,3,2518,12307188,garden|parking,https://example.com/property/513,2026-02-01
+DiamondTrust,U0514,2BR House in Kitengela,Kitengela,House,2,2,1377,4000000,,https://example.com/property/514,2026-01-29
+DiamondTrust,V0515,3BR Apartment in Ngong,Ngong,Apartment,3,3,1313,20091187,,https://example.com/property/515,2026-02-05
+PropertyPro,W0516,3BR Bungalow in Parklands,Parklands,Bungalow,3,2,2378,37800300,,https://example.com/property/516,2026-02-01
+BuyRentKenya,X0517,2BR House in Kitengela,Kitengela,House,2,2,1334,13942903,gym|lift,https://example.com/property/517,2026-02-18
+BuyRentKenya,Y0518,4BR House in Kilimani,Kilimani,House,4,3,2734,35793855,,https://example.com/property/518,2026-02-07
+PropertyPro,Z0519,4BR Townhouse in Upper Hill,Upper Hill,Townhouse,4,3,2475,129473033,balcony|internet,https://example.com/property/519,2026-02-06
+BuyRentKenya,A0520,2BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,2,2,882,39908994,gym|parking|pool|garden|playground,https://example.com/property/520,2026-02-06
+BuyRentKenya,B0521,4BR House in Komarock,Komarock,House,4,3,2475,7874827,,https://example.com/property/521,2026-02-06
+DiamondTrust,C0522,2BR House in Kileleshwa,Kileleshwa,House,2,1,1323,36338884,,https://example.com/property/522,2026-02-18
+PropertyPro,D0523,3BR Villa in Runda,Runda,Villa,3,2,2346,89379174,,https://example.com/property/523,2026-02-01
+DiamondTrust,E0524,2BR Townhouse in Syokimau,Syokimau,Townhouse,2,2,947,6834216,garden|furnished|lift|internet,https://example.com/property/524,2026-02-16
+PropertyPro,F0525,3BR Townhouse in Upper Hill,Upper Hill,Townhouse,3,2,1883,45020358,garden|parking|water|gym|internet,https://example.com/property/525,2026-02-05
+DiamondTrust,G0526,5BR Townhouse in Thika Road,Thika Road,Townhouse,5,4,1087,10040366,water|gym|playground|internet|cctv,https://example.com/property/526,2026-01-24
+PropertyPro,H0527,3BR Townhouse in Parklands,Parklands,Townhouse,3,2,1851,17471809,,https://example.com/property/527,2026-02-03
+DiamondTrust,I0528,5BR Bungalow in Donholm,Donholm,Bungalow,5,5,1184,23506153,security|lift|internet|pool,https://example.com/property/528,2026-01-26
+BuyRentKenya,J0529,2BR Villa in Kitengela,Kitengela,Villa,2,2,914,11657345,playground|furnished,https://example.com/property/529,2026-02-12
+PropertyPro,K0530,2BR Apartment in Ngong,Ngong,Apartment,2,1,957,24578889,cctv|furnished|parking|gym|balcony,https://example.com/property/530,2026-02-18
+PropertyPro,L0531,4BR House in Komarock,Komarock,House,4,4,2206,4382152,generator|internet|pool|gym|balcony,https://example.com/property/531,2026-02-01
+DiamondTrust,M0532,1BR Townhouse in Langata,Langata,Townhouse,1,2,1097,11172827,playground|balcony|security|pool,https://example.com/property/532,2026-02-13
+BuyRentKenya,N0533,2BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,2,2,1173,17051936,pool|parking|generator,https://example.com/property/533,2026-02-16
+DiamondTrust,O0534,2BR House in Buruburu,Buruburu,House,2,1,1184,11153589,,https://example.com/property/534,2026-01-27
+BuyRentKenya,P0535,4BR Bungalow in Ngong,Ngong,Bungalow,4,3,2884,18806946,internet|pool|playground|security,https://example.com/property/535,2026-02-08
+DiamondTrust,Q0536,2BR Apartment in Donholm,Donholm,Apartment,2,2,710,4000000,playground|water|security|pool|lift,https://example.com/property/536,2026-01-31
+DiamondTrust,R0537,1BR House in Kileleshwa,Kileleshwa,House,1,1,1205,18348864,,https://example.com/property/537,2026-02-02
+PropertyPro,S0538,3BR Bungalow in Upper Hill,Upper Hill,Bungalow,3,3,2088,96364746,,https://example.com/property/538,2026-02-14
+DiamondTrust,T0539,3BR Villa in Komarock,Komarock,Villa,3,2,2895,15831942,lift|security|water,https://example.com/property/539,2026-01-24
+DiamondTrust,U0540,2BR Apartment in Kasarani,Kasarani,Apartment,2,1,742,9236803,,https://example.com/property/540,2026-01-31
+BuyRentKenya,V0541,2BR Apartment in Komarock,Komarock,Apartment,2,2,904,5120314,,https://example.com/property/541,2026-01-31
+PropertyPro,W0542,4BR Apartment in Parklands,Parklands,Apartment,4,3,1689,16125794,furnished|generator|parking|internet,https://example.com/property/542,2026-02-19
+BuyRentKenya,X0543,2BR Villa in Donholm,Donholm,Villa,2,2,1065,5901061,gym|balcony|water,https://example.com/property/543,2026-02-11
+BuyRentKenya,Y0544,3BR Townhouse in Runda,Runda,Townhouse,3,2,1560,159968675,,https://example.com/property/544,2026-01-20
+BuyRentKenya,Z0545,3BR Townhouse in Thika Road,Thika Road,Townhouse,3,2,1582,14008785,water|pool|lift|garden,https://example.com/property/545,2026-02-05
+PropertyPro,A0546,2BR House in Kasarani,Kasarani,House,2,2,1194,11759237,furnished|pool|internet|cctv|balcony,https://example.com/property/546,2026-02-05
+PropertyPro,B0547,3BR Villa in Komarock,Komarock,Villa,3,3,2949,5135458,furnished|internet|parking,https://example.com/property/547,2026-02-13
+DiamondTrust,C0548,4BR Townhouse in Upper Hill,Upper Hill,Townhouse,4,3,1980,118751796,,https://example.com/property/548,2026-02-18
+DiamondTrust,D0549,3BR Villa in Buruburu,Buruburu,Villa,3,3,2486,8417838,balcony|water,https://example.com/property/549,2026-02-02
+BuyRentKenya,E0550,3BR House in Donholm,Donholm,House,3,2,2109,18427566,water|cctv|parking|security,https://example.com/property/550,2026-02-04
+PropertyPro,F0551,3BR Townhouse in Lavington,Lavington,Townhouse,3,3,1345,38308542,playground|generator|balcony,https://example.com/property/551,2026-01-21
+DiamondTrust,G0552,3BR Apartment in Kitengela,Kitengela,Apartment,3,2,1313,10302934,gym|security|lift|parking|garden,https://example.com/property/552,2026-02-10
+BuyRentKenya,H0553,5BR House in Langata,Langata,House,5,4,3584,25189327,,https://example.com/property/553,2026-01-26
+BuyRentKenya,I0554,2BR Townhouse in Ongata Rongai,Ongata Rongai,Townhouse,2,2,968,20086094,,https://example.com/property/554,2026-02-04
+PropertyPro,J0555,4BR Townhouse in Parklands,Parklands,Townhouse,4,3,1808,43382393,generator|garden|balcony|internet|furnished,https://example.com/property/555,2026-01-30
+PropertyPro,K0556,4BR Bungalow in Thika Road,Thika Road,Bungalow,4,4,2712,10794482,,https://example.com/property/556,2026-02-13
+BuyRentKenya,L0557,2BR House in Buruburu,Buruburu,House,2,1,1227,6882861,,https://example.com/property/557,2026-02-08
+DiamondTrust,M0558,5BR Bungalow in Karen,Karen,Bungalow,5,4,871,225000000,playground|cctv|generator|internet|garden,https://example.com/property/558,2026-02-07
+PropertyPro,N0559,3BR Villa in Upper Hill,Upper Hill,Villa,3,3,2680,31370621,furnished|internet,https://example.com/property/559,2026-02-13
+DiamondTrust,O0560,2BR Villa in Kitengela,Kitengela,Villa,2,2,1270,7409145,garden|cctv|furnished|playground,https://example.com/property/560,2026-02-08
+PropertyPro,P0561,4BR Apartment in Embakasi,Embakasi,Apartment,4,3,1819,9228866,,https://example.com/property/561,2026-02-18
+DiamondTrust,Q0562,3BR Apartment in Langata,Langata,Apartment,3,2,1130,26934237,balcony|cctv|internet|security|furnished,https://example.com/property/562,2026-01-30
+PropertyPro,R0563,3BR Villa in Lavington,Lavington,Villa,3,2,2658,25010240,cctv|lift|generator|security,https://example.com/property/563,2026-01-29
+PropertyPro,S0564,2BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,2,1,1011,14453729,security|cctv,https://example.com/property/564,2026-02-09
+DiamondTrust,T0565,2BR Villa in Embakasi,Embakasi,Villa,2,2,1011,7973914,,https://example.com/property/565,2026-02-14
+BuyRentKenya,U0566,3BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,3,3,1593,48446020,generator|water|balcony|pool|furnished,https://example.com/property/566,2026-02-17
+DiamondTrust,V0567,1BR Villa in Kitengela,Kitengela,Villa,1,2,914,5520849,pool|gym|cctv|playground|garden,https://example.com/property/567,2026-01-22
+PropertyPro,W0568,2BR Villa in Kilimani,Kilimani,Villa,2,1,893,44431329,lift|balcony|garden|security|gym,https://example.com/property/568,2026-02-14
+DiamondTrust,X0569,3BR Apartment in Karen,Karen,Apartment,3,3,1431,118170402,,https://example.com/property/569,2026-02-12
+BuyRentKenya,Y0570,1BR Villa in Langata,Langata,Villa,1,2,1011,10753245,,https://example.com/property/570,2026-02-08
+BuyRentKenya,Z0571,3BR Bungalow in Kitengela,Kitengela,Bungalow,3,3,2260,17250634,generator|furnished,https://example.com/property/571,2026-02-14
+PropertyPro,A0572,2BR House in Thika Road,Thika Road,House,2,1,1044,5447963,internet|pool,https://example.com/property/572,2026-02-03
+DiamondTrust,B0573,2BR House in Kilimani,Kilimani,House,2,1,1334,35511994,furnished|cctv|parking|pool,https://example.com/property/573,2026-01-30
+PropertyPro,C0574,2BR Townhouse in Ongata Rongai,Ongata Rongai,Townhouse,2,1,990,12001789,generator|parking|internet,https://example.com/property/574,2026-01-25
+DiamondTrust,D0575,2BR House in Embakasi,Embakasi,House,2,2,1130,3451564,garden|balcony|furnished|gym|pool,https://example.com/property/575,2026-01-30
+PropertyPro,E0576,3BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,3,3,1323,12671587,,https://example.com/property/576,2026-02-04
+BuyRentKenya,F0577,3BR House in Kileleshwa,Kileleshwa,House,3,3,1571,48827272,,https://example.com/property/577,2026-02-09
+DiamondTrust,G0578,3BR Townhouse in Ongata Rongai,Ongata Rongai,Townhouse,3,3,1582,24123625,furnished|pool|cctv|balcony,https://example.com/property/578,2026-01-31
+DiamondTrust,H0579,3BR Bungalow in Langata,Langata,Bungalow,3,3,1797,22406657,security|balcony|furnished|pool,https://example.com/property/579,2026-02-07
+DiamondTrust,I0580,2BR Apartment in Langata,Langata,Apartment,2,1,990,17067475,water|generator,https://example.com/property/580,2026-02-07
+PropertyPro,J0581,2BR House in Thika Road,Thika Road,House,2,1,1377,3899670,internet|gym,https://example.com/property/581,2026-02-19
+PropertyPro,K0582,2BR House in Buruburu,Buruburu,House,2,1,1184,9104516,water|pool,https://example.com/property/582,2026-02-02
+BuyRentKenya,L0583,2BR Bungalow in Kitengela,Kitengela,Bungalow,2,2,1517,4108800,security|balcony|furnished|internet,https://example.com/property/583,2026-01-29
+BuyRentKenya,M0584,1BR Bungalow in Runda,Runda,Bungalow,1,1,1001,42575300,security|gym,https://example.com/property/584,2026-02-01
+BuyRentKenya,N0585,1BR Townhouse in Kilimani,Kilimani,Townhouse,1,1,936,34947166,pool|furnished|playground|balcony|garden,https://example.com/property/585,2026-01-24
+BuyRentKenya,O0586,4BR House in Ongata Rongai,Ongata Rongai,House,4,3,2195,7928026,furnished|garden,https://example.com/property/586,2026-01-22
+BuyRentKenya,P0587,3BR Apartment in Buruburu,Buruburu,Apartment,3,2,1151,5135178,balcony|water|generator,https://example.com/property/587,2026-01-27
+DiamondTrust,Q0588,2BR Villa in Syokimau,Syokimau,Villa,2,2,1216,13066484,,https://example.com/property/588,2026-01-20
+PropertyPro,R0589,3BR Villa in Embakasi,Embakasi,Villa,3,2,3164,3078161,,https://example.com/property/589,2026-02-17
+DiamondTrust,S0590,2BR Villa in Komarock,Komarock,Villa,2,1,947,11107058,furnished|gym|balcony|water,https://example.com/property/590,2026-01-24
+DiamondTrust,T0591,3BR House in Karen,Karen,House,3,2,1829,43460356,,https://example.com/property/591,2026-02-09
+PropertyPro,U0592,3BR Villa in Komarock,Komarock,Villa,3,2,2992,8415764,gym|balcony|cctv,https://example.com/property/592,2026-01-24
+PropertyPro,V0593,3BR Townhouse in Kileleshwa,Kileleshwa,Townhouse,3,2,1582,46412976,,https://example.com/property/593,2026-02-10
+BuyRentKenya,W0594,2BR Apartment in Westlands,Westlands,Apartment,2,1,871,41717182,,https://example.com/property/594,2026-02-04
+PropertyPro,X0595,5BR House in Kasarani,Kasarani,House,5,5,3390,14190220,gym|parking|playground|security,https://example.com/property/595,2026-02-05
+PropertyPro,Y0596,4BR Townhouse in Kilimani,Kilimani,Townhouse,4,4,1862,25903139,,https://example.com/property/596,2026-01-23
+PropertyPro,Z0597,2BR Apartment in Kilimani,Kilimani,Apartment,2,2,807,33691616,garden|generator|furnished|playground,https://example.com/property/597,2026-01-20
+BuyRentKenya,A0598,4BR Townhouse in Lavington,Lavington,Townhouse,4,4,2217,64898414,gym|cctv|generator,https://example.com/property/598,2026-02-07
+DiamondTrust,B0599,2BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,2,1,925,11630197,lift|pool|playground|balcony|cctv,https://example.com/property/599,2026-01-31
+BuyRentKenya,C0600,2BR Bungalow in Upper Hill,Upper Hill,Bungalow,2,2,1485,75659130,lift|generator|water|balcony|parking,https://example.com/property/600,2026-01-28
+DiamondTrust,D0601,3BR Villa in Runda,Runda,Villa,3,3,2228,138099643,,https://example.com/property/601,2026-02-03
+BuyRentKenya,E0602,1BR Apartment in Upper Hill,Upper Hill,Apartment,1,1,602,45216707,balcony|water|playground,https://example.com/property/602,2026-02-18
+BuyRentKenya,F0603,3BR Apartment in Langata,Langata,Apartment,3,3,1410,20891665,cctv|garden|water|furnished,https://example.com/property/603,2026-02-11
+BuyRentKenya,G0604,2BR Townhouse in Donholm,Donholm,Townhouse,2,1,1194,5829383,cctv|generator|balcony|security|playground,https://example.com/property/604,2026-02-05
+BuyRentKenya,H0605,4BR Townhouse in Syokimau,Syokimau,Townhouse,4,3,2411,13756737,,https://example.com/property/605,2026-02-04
+BuyRentKenya,I0606,2BR Bungalow in Donholm,Donholm,Bungalow,2,1,1302,10425157,,https://example.com/property/606,2026-01-24
+BuyRentKenya,J0607,4BR Bungalow in Embakasi,Embakasi,Bungalow,4,4,3530,5008030,,https://example.com/property/607,2026-01-25
+DiamondTrust,K0608,3BR Villa in Kileleshwa,Kileleshwa,Villa,3,2,2798,36672806,water|gym|cctv|garden|lift,https://example.com/property/608,2026-01-20
+PropertyPro,L0609,4BR Townhouse in Upper Hill,Upper Hill,Townhouse,4,4,2131,116792454,,https://example.com/property/609,2026-02-13
+PropertyPro,M0610,3BR House in Komarock,Komarock,House,3,2,2174,16450298,pool|playground|generator|security,https://example.com/property/610,2026-01-31
+DiamondTrust,N0611,2BR Villa in Ongata Rongai,Ongata Rongai,Villa,2,1,1022,10182067,internet|gym,https://example.com/property/611,2026-02-11
+BuyRentKenya,O0612,2BR Apartment in Westlands,Westlands,Apartment,2,2,742,48524535,cctv|furnished|garden,https://example.com/property/612,2026-01-27
+DiamondTrust,P0613,4BR Apartment in Buruburu,Buruburu,Apartment,4,3,1388,18598090,furnished|security|gym,https://example.com/property/613,2026-01-29
+DiamondTrust,Q0614,2BR Apartment in Embakasi,Embakasi,Apartment,2,1,968,3839271,pool|internet,https://example.com/property/614,2026-01-27
+PropertyPro,R0615,2BR House in Karen,Karen,House,2,1,1334,104817526,cctv|balcony,https://example.com/property/615,2026-02-16
+DiamondTrust,S0616,4BR Bungalow in Lavington,Lavington,Bungalow,4,3,2820,36818022,,https://example.com/property/616,2026-01-20
+PropertyPro,T0617,3BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,3,2,1119,5913067,internet|lift|security,https://example.com/property/617,2026-02-03
+BuyRentKenya,U0618,1BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,1,2,914,21353827,garden|generator|cctv|playground,https://example.com/property/618,2026-02-16
+BuyRentKenya,V0619,3BR Bungalow in Kitengela,Kitengela,Bungalow,3,3,1733,5875610,,https://example.com/property/619,2026-02-19
+PropertyPro,W0620,2BR Villa in Buruburu,Buruburu,Villa,2,2,904,8017465,internet|balcony|security|parking,https://example.com/property/620,2026-01-30
+BuyRentKenya,X0621,3BR Apartment in Lavington,Lavington,Apartment,3,3,1194,65609832,internet|parking|generator|garden|security,https://example.com/property/621,2026-01-30
+PropertyPro,Y0622,2BR Villa in Ongata Rongai,Ongata Rongai,Villa,2,2,1205,16670490,,https://example.com/property/622,2026-02-06
+BuyRentKenya,Z0623,3BR Bungalow in Embakasi,Embakasi,Bungalow,3,2,2109,7481363,furnished|garden|gym|pool,https://example.com/property/623,2026-01-21
+DiamondTrust,A0624,2BR House in Kasarani,Kasarani,House,2,2,1270,7448235,lift|pool|internet,https://example.com/property/624,2026-01-26
+BuyRentKenya,B0625,3BR Apartment in Kileleshwa,Kileleshwa,Apartment,3,3,1044,40084218,garden|water,https://example.com/property/625,2026-02-12
+DiamondTrust,C0626,3BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,3,3,1959,13561211,internet|playground,https://example.com/property/626,2026-01-29
+BuyRentKenya,D0627,2BR Apartment in Parklands,Parklands,Apartment,2,1,818,15898664,,https://example.com/property/627,2026-02-16
+PropertyPro,E0628,3BR Villa in Lavington,Lavington,Villa,3,2,2271,46841909,parking|garden|cctv|pool,https://example.com/property/628,2026-02-19
+DiamondTrust,F0629,4BR Apartment in Syokimau,Syokimau,Apartment,4,3,1733,13503543,,https://example.com/property/629,2026-02-11
+PropertyPro,G0630,4BR House in Syokimau,Syokimau,House,4,4,3035,21178573,lift|parking|security,https://example.com/property/630,2026-02-16
+BuyRentKenya,H0631,3BR Townhouse in Komarock,Komarock,Townhouse,3,2,1872,5821736,,https://example.com/property/631,2026-02-16
+BuyRentKenya,I0632,3BR Townhouse in Komarock,Komarock,Townhouse,3,2,1334,15265858,security|internet|garden|playground,https://example.com/property/632,2026-02-15
+PropertyPro,J0633,3BR House in Kitengela,Kitengela,House,3,3,2195,16849515,furnished|pool|generator,https://example.com/property/633,2026-02-19
+BuyRentKenya,K0634,4BR Townhouse in Kilimani,Kilimani,Townhouse,4,4,1819,32457466,,https://example.com/property/634,2026-02-19
+BuyRentKenya,L0635,2BR Villa in Kilimani,Kilimani,Villa,2,2,1108,24958876,,https://example.com/property/635,2026-02-07
+PropertyPro,M0636,3BR Apartment in Thika Road,Thika Road,Apartment,3,2,1227,6765441,water|garden|playground,https://example.com/property/636,2026-02-18
+BuyRentKenya,N0637,1BR Villa in Kilimani,Kilimani,Villa,1,2,936,28853881,,https://example.com/property/637,2026-02-05
+DiamondTrust,O0638,4BR Bungalow in Parklands,Parklands,Bungalow,4,4,3412,17362532,,https://example.com/property/638,2026-01-24
+BuyRentKenya,P0639,2BR Villa in Runda,Runda,Villa,2,1,1076,39283447,lift|water|playground|gym|pool,https://example.com/property/639,2026-01-26
+DiamondTrust,Q0640,4BR Townhouse in Komarock,Komarock,Townhouse,4,4,2055,6721324,gym|balcony|internet|security,https://example.com/property/640,2026-01-24
+BuyRentKenya,R0641,3BR House in Kitengela,Kitengela,House,3,3,1786,8951435,garden|generator|water|internet|pool,https://example.com/property/641,2026-02-14
+DiamondTrust,S0642,4BR Villa in Komarock,Komarock,Villa,4,4,4370,19518975,internet|parking|playground|water,https://example.com/property/642,2026-02-03
+DiamondTrust,T0643,3BR Apartment in Lavington,Lavington,Apartment,3,2,1216,67580114,garden|pool|lift|balcony,https://example.com/property/643,2026-01-21
+BuyRentKenya,U0644,3BR Villa in Ngong,Ngong,Villa,3,2,3218,27027555,playground|internet|security|water,https://example.com/property/644,2026-02-14
+BuyRentKenya,V0645,3BR Apartment in Parklands,Parklands,Apartment,3,3,1431,30354462,gym|furnished|garden|playground|water,https://example.com/property/645,2026-01-20
+BuyRentKenya,W0646,5BR Bungalow in Embakasi,Embakasi,Bungalow,5,4,1205,15505291,internet|security,https://example.com/property/646,2026-02-04
+DiamondTrust,X0647,1BR Villa in Upper Hill,Upper Hill,Villa,1,1,1065,43409690,garden|generator|cctv|balcony|playground,https://example.com/property/647,2026-02-13
+BuyRentKenya,Y0648,2BR Townhouse in Embakasi,Embakasi,Townhouse,2,1,1011,4854458,,https://example.com/property/648,2026-02-11
+BuyRentKenya,Z0649,3BR Apartment in Ngong,Ngong,Apartment,3,3,1205,16268922,,https://example.com/property/649,2026-02-14
+PropertyPro,A0650,2BR Villa in Kasarani,Kasarani,Villa,2,2,1237,3500000,lift|parking,https://example.com/property/650,2026-02-10
+PropertyPro,B0651,3BR Bungalow in Kitengela,Kitengela,Bungalow,3,3,2508,5468136,,https://example.com/property/651,2026-01-24
+DiamondTrust,C0652,5BR Apartment in Syokimau,Syokimau,Apartment,5,5,936,27000000,lift|parking,https://example.com/property/652,2026-02-08
+BuyRentKenya,D0653,1BR Villa in Komarock,Komarock,Villa,1,2,1087,6493882,water|playground|gym,https://example.com/property/653,2026-01-20
+BuyRentKenya,E0654,3BR House in Kitengela,Kitengela,House,3,2,1550,8432641,internet|playground|pool,https://example.com/property/654,2026-02-05
+BuyRentKenya,F0655,4BR Townhouse in Kitengela,Kitengela,Townhouse,4,4,2325,5783508,water|internet|generator,https://example.com/property/655,2026-01-24
+BuyRentKenya,G0656,2BR Bungalow in Karen,Karen,Bungalow,2,2,1506,47762474,generator|garden|parking|cctv,https://example.com/property/656,2026-01-22
+BuyRentKenya,H0657,4BR Apartment in Donholm,Donholm,Apartment,4,4,1776,12558407,playground|parking|pool,https://example.com/property/657,2026-02-04
+BuyRentKenya,I0658,4BR Apartment in Parklands,Parklands,Apartment,4,3,1377,40542175,generator|gym|playground|cctv|internet,https://example.com/property/658,2026-01-31
+PropertyPro,J0659,4BR Bungalow in Lavington,Lavington,Bungalow,4,4,3638,71397898,cctv|balcony|pool|security,https://example.com/property/659,2026-02-10
+BuyRentKenya,K0660,4BR House in Langata,Langata,House,4,4,3132,36091839,lift|playground|generator,https://example.com/property/660,2026-01-20
+PropertyPro,L0661,2BR Apartment in Kileleshwa,Kileleshwa,Apartment,2,1,839,42043051,balcony|parking|water|furnished|internet,https://example.com/property/661,2026-02-12
+PropertyPro,M0662,3BR Villa in Donholm,Donholm,Villa,3,3,2615,13536628,parking|playground|lift,https://example.com/property/662,2026-01-25
+PropertyPro,N0663,2BR Apartment in Donholm,Donholm,Apartment,2,1,904,11534722,water|security|pool|gym|parking,https://example.com/property/663,2026-01-25
+PropertyPro,O0664,3BR Apartment in Upper Hill,Upper Hill,Apartment,3,3,1410,47686222,gym|balcony,https://example.com/property/664,2026-02-07
+PropertyPro,P0665,4BR House in Parklands,Parklands,House,4,3,2389,32242593,water|gym|furnished|playground,https://example.com/property/665,2026-02-05
+PropertyPro,Q0666,3BR House in Westlands,Westlands,House,3,3,1991,58858224,generator|gym|playground|pool|furnished,https://example.com/property/666,2026-02-14
+BuyRentKenya,R0667,3BR Bungalow in Karen,Karen,Bungalow,3,2,1851,72231527,cctv|generator,https://example.com/property/667,2026-02-10
+PropertyPro,S0668,2BR Townhouse in Lavington,Lavington,Townhouse,2,2,861,47330426,,https://example.com/property/668,2026-02-06
+BuyRentKenya,T0669,2BR House in Runda,Runda,House,2,2,1173,77553533,,https://example.com/property/669,2026-02-15
+BuyRentKenya,U0670,2BR Townhouse in Ngong,Ngong,Townhouse,2,2,1194,12163501,,https://example.com/property/670,2026-02-07
+DiamondTrust,V0671,3BR Villa in Westlands,Westlands,Villa,3,2,2389,75361727,furnished|generator,https://example.com/property/671,2026-02-13
+BuyRentKenya,W0672,2BR House in Kasarani,Kasarani,House,2,2,1065,3500000,balcony|cctv|lift|pool,https://example.com/property/672,2026-01-23
+DiamondTrust,X0673,3BR House in Runda,Runda,House,3,2,1657,154502834,,https://example.com/property/673,2026-02-05
+PropertyPro,Y0674,3BR House in Karen,Karen,House,3,2,2034,92084267,,https://example.com/property/674,2026-01-25
+PropertyPro,Z0675,4BR Bungalow in Kasarani,Kasarani,Bungalow,4,4,3509,19725828,,https://example.com/property/675,2026-02-05
+DiamondTrust,A0676,3BR House in Ngong,Ngong,House,3,2,1980,13141218,lift|gym|water,https://example.com/property/676,2026-01-29
+PropertyPro,B0677,2BR Villa in Buruburu,Buruburu,Villa,2,1,1216,12409797,,https://example.com/property/677,2026-02-06
+PropertyPro,C0678,1BR Apartment in Kilimani,Kilimani,Apartment,1,1,548,18926197,parking|gym,https://example.com/property/678,2026-01-28
+BuyRentKenya,D0679,2BR Townhouse in Ngong,Ngong,Townhouse,2,1,1033,18344167,,https://example.com/property/679,2026-01-24
+DiamondTrust,E0680,2BR Townhouse in Parklands,Parklands,Townhouse,2,1,1216,11640072,cctv|internet|furnished|gym|parking,https://example.com/property/680,2026-02-05
+DiamondTrust,F0681,1BR Apartment in Buruburu,Buruburu,Apartment,1,2,495,8508075,,https://example.com/property/681,2026-02-05
+PropertyPro,G0682,2BR Bungalow in Kitengela,Kitengela,Bungalow,2,2,1506,6993759,garden|playground|furnished|parking,https://example.com/property/682,2026-02-06
+BuyRentKenya,H0683,1BR House in Donholm,Donholm,House,1,1,904,5850775,,https://example.com/property/683,2026-01-20
+BuyRentKenya,I0684,1BR House in Kilimani,Kilimani,House,1,1,979,16563715,playground|generator|lift|security,https://example.com/property/684,2026-01-26
+DiamondTrust,J0685,2BR House in Kasarani,Kasarani,House,2,1,1140,9032476,gym|security|generator,https://example.com/property/685,2026-01-30
+PropertyPro,K0686,4BR Townhouse in Embakasi,Embakasi,Townhouse,4,4,2142,9446992,cctv|garden,https://example.com/property/686,2026-02-12
+BuyRentKenya,L0687,2BR Villa in Donholm,Donholm,Villa,2,2,1140,9668509,parking|lift|security,https://example.com/property/687,2026-01-22
+PropertyPro,M0688,4BR Villa in Kitengela,Kitengela,Villa,4,4,3896,24641493,,https://example.com/property/688,2026-02-07
+BuyRentKenya,N0689,2BR Villa in Kitengela,Kitengela,Villa,2,2,968,7085527,,https://example.com/property/689,2026-02-01
+DiamondTrust,O0690,5BR Villa in Embakasi,Embakasi,Villa,5,4,5704,15338121,generator|furnished|playground|parking,https://example.com/property/690,2026-02-12
+DiamondTrust,P0691,2BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,2,2,1356,5000000,playground|garden,https://example.com/property/691,2026-02-05
+DiamondTrust,Q0692,1BR Villa in Kasarani,Kasarani,Villa,1,1,893,7463819,garden|pool,https://example.com/property/692,2026-01-29
+DiamondTrust,R0693,5BR House in Langata,Langata,House,5,4,4014,34482896,cctv|playground|balcony|furnished,https://example.com/property/693,2026-02-17
+PropertyPro,S0694,4BR Townhouse in Karen,Karen,Townhouse,4,3,2540,187807011,internet|balcony|water|parking,https://example.com/property/694,2026-01-28
+PropertyPro,T0695,2BR Townhouse in Embakasi,Embakasi,Townhouse,2,2,947,3028840,,https://example.com/property/695,2026-02-04
+DiamondTrust,U0696,3BR House in Parklands,Parklands,House,3,2,2012,30681346,water|gym|furnished|lift|pool,https://example.com/property/696,2026-02-05
+PropertyPro,V0697,4BR Bungalow in Ongata Rongai,Ongata Rongai,Bungalow,4,3,3799,25358568,water|garden|security|pool,https://example.com/property/697,2026-02-18
+PropertyPro,W0698,3BR Townhouse in Westlands,Westlands,Townhouse,3,3,1453,77037345,,https://example.com/property/698,2026-01-31
+PropertyPro,X0699,4BR Villa in Parklands,Parklands,Villa,4,3,3735,49544542,parking|garden|generator|gym|water,https://example.com/property/699,2026-02-14
+PropertyPro,Y0700,4BR Apartment in Kilimani,Kilimani,Apartment,4,3,1496,70536325,garden|pool,https://example.com/property/700,2026-01-25
+BuyRentKenya,Z0701,4BR Apartment in Kilimani,Kilimani,Apartment,4,3,1560,35450871,garden|gym|parking,https://example.com/property/701,2026-02-06
+PropertyPro,A0702,2BR Townhouse in Langata,Langata,Townhouse,2,2,1022,14523740,,https://example.com/property/702,2026-02-15
+PropertyPro,B0703,1BR Apartment in Lavington,Lavington,Apartment,1,1,495,29361528,,https://example.com/property/703,2026-02-14
+BuyRentKenya,C0704,4BR Bungalow in Komarock,Komarock,Bungalow,4,3,2820,15073402,water|generator|balcony,https://example.com/property/704,2026-02-16
+BuyRentKenya,D0705,2BR Townhouse in Thika Road,Thika Road,Townhouse,2,1,957,3011938,security|cctv|lift|parking,https://example.com/property/705,2026-02-10
+DiamondTrust,E0706,2BR Townhouse in Ongata Rongai,Ongata Rongai,Townhouse,2,1,914,5000000,,https://example.com/property/706,2026-02-11
+BuyRentKenya,F0707,1BR Bungalow in Parklands,Parklands,Bungalow,1,1,914,21462674,,https://example.com/property/707,2026-02-08
+DiamondTrust,G0708,2BR House in Kilimani,Kilimani,House,2,2,1184,29902111,water|playground|furnished,https://example.com/property/708,2026-01-26
+BuyRentKenya,H0709,2BR Townhouse in Kilimani,Kilimani,Townhouse,2,2,1140,17005904,lift|pool|gym,https://example.com/property/709,2026-02-10
+BuyRentKenya,I0710,3BR Villa in Syokimau,Syokimau,Villa,3,2,3164,15997516,cctv|garden,https://example.com/property/710,2026-02-13
+DiamondTrust,J0711,3BR Apartment in Kileleshwa,Kileleshwa,Apartment,3,2,1184,39248131,cctv|water,https://example.com/property/711,2026-02-13
+PropertyPro,K0712,2BR Villa in Lavington,Lavington,Villa,2,1,1097,32791462,internet|pool|cctv|balcony|lift,https://example.com/property/712,2026-01-24
+DiamondTrust,L0713,3BR House in Ongata Rongai,Ongata Rongai,House,3,2,2034,21359218,,https://example.com/property/713,2026-01-22
+DiamondTrust,M0714,3BR House in Karen,Karen,House,3,2,2002,25086383,gym|furnished|balcony|garden,https://example.com/property/714,2026-01-27
+DiamondTrust,N0715,3BR Villa in Kasarani,Kasarani,Villa,3,3,3218,11695655,cctv|pool,https://example.com/property/715,2026-01-20
+BuyRentKenya,O0716,4BR Bungalow in Komarock,Komarock,Bungalow,4,4,3778,12968814,playground|generator,https://example.com/property/716,2026-01-28
+DiamondTrust,P0717,1BR Apartment in Kitengela,Kitengela,Apartment,1,2,548,11074867,parking|cctv|pool|balcony,https://example.com/property/717,2026-01-29
+DiamondTrust,Q0718,2BR Townhouse in Runda,Runda,Townhouse,2,1,861,75837958,playground|cctv|gym|furnished,https://example.com/property/718,2026-02-04
+BuyRentKenya,R0719,1BR House in Ngong,Ngong,House,1,1,1248,12070643,,https://example.com/property/719,2026-02-15
+BuyRentKenya,S0720,2BR Townhouse in Westlands,Westlands,Townhouse,2,1,1119,51781970,,https://example.com/property/720,2026-01-22
+BuyRentKenya,T0721,2BR House in Embakasi,Embakasi,House,2,1,1248,9249636,,https://example.com/property/721,2026-01-27
+BuyRentKenya,U0722,2BR Villa in Kileleshwa,Kileleshwa,Villa,2,1,1033,16821832,,https://example.com/property/722,2026-02-19
+BuyRentKenya,V0723,3BR Apartment in Westlands,Westlands,Apartment,3,2,1194,21435595,parking|water,https://example.com/property/723,2026-02-08
+BuyRentKenya,W0724,4BR House in Thika Road,Thika Road,House,4,4,2249,10193348,,https://example.com/property/724,2026-02-17
+BuyRentKenya,X0725,4BR Apartment in Langata,Langata,Apartment,4,3,1582,12396871,generator|balcony|parking|internet,https://example.com/property/725,2026-02-01
+PropertyPro,Y0726,2BR Townhouse in Kilimani,Kilimani,Townhouse,2,2,1184,33301873,lift|gym|parking|balcony|garden,https://example.com/property/726,2026-01-20
+BuyRentKenya,Z0727,2BR Bungalow in Upper Hill,Upper Hill,Bungalow,2,2,1539,69168510,,https://example.com/property/727,2026-02-08
+BuyRentKenya,A0728,4BR Villa in Embakasi,Embakasi,Villa,4,4,4058,5655708,generator|furnished|garden,https://example.com/property/728,2026-02-09
+BuyRentKenya,B0729,2BR House in Embakasi,Embakasi,House,2,2,1485,5632338,furnished|water|parking|pool|generator,https://example.com/property/729,2026-01-23
+PropertyPro,C0730,4BR Villa in Donholm,Donholm,Villa,4,4,3175,20880393,cctv|garden|gym|internet,https://example.com/property/730,2026-02-10
+PropertyPro,D0731,4BR House in Parklands,Parklands,House,4,3,3132,33610596,,https://example.com/property/731,2026-02-13
+PropertyPro,E0732,3BR House in Runda,Runda,House,3,2,1679,37573606,lift|water,https://example.com/property/732,2026-02-04
+DiamondTrust,F0733,3BR Apartment in Komarock,Komarock,Apartment,3,2,1065,12604437,generator|pool|furnished,https://example.com/property/733,2026-02-08
+PropertyPro,G0734,2BR House in Kasarani,Kasarani,House,2,2,1033,5062142,,https://example.com/property/734,2026-01-21
+BuyRentKenya,H0735,5BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,5,4,1227,14921624,,https://example.com/property/735,2026-01-31
+DiamondTrust,I0736,3BR Villa in Kasarani,Kasarani,Villa,3,3,2281,9747953,furnished|parking|gym|water|playground,https://example.com/property/736,2026-01-21
+BuyRentKenya,J0737,2BR Bungalow in Ngong,Ngong,Bungalow,2,1,1689,24704469,,https://example.com/property/737,2026-02-10
+DiamondTrust,K0738,2BR House in Kilimani,Kilimani,House,2,2,1302,45039323,pool|generator|garden|parking|furnished,https://example.com/property/738,2026-02-14
+DiamondTrust,L0739,1BR House in Upper Hill,Upper Hill,House,1,2,882,34384004,security|furnished,https://example.com/property/739,2026-01-23
+BuyRentKenya,M0740,2BR Villa in Embakasi,Embakasi,Villa,2,1,1011,6877251,,https://example.com/property/740,2026-01-20
+DiamondTrust,N0741,5BR Townhouse in Donholm,Donholm,Townhouse,5,4,1022,19050631,,https://example.com/property/741,2026-02-13
+BuyRentKenya,O0742,3BR House in Syokimau,Syokimau,House,3,3,2142,4896925,,https://example.com/property/742,2026-02-04
+BuyRentKenya,P0743,3BR House in Lavington,Lavington,House,3,3,1765,62100927,,https://example.com/property/743,2026-02-14
+PropertyPro,Q0744,3BR Villa in Kileleshwa,Kileleshwa,Villa,3,3,2906,24635632,lift|playground,https://example.com/property/744,2026-02-19
+PropertyPro,R0745,3BR Villa in Langata,Langata,Villa,3,2,2292,16510775,internet|balcony,https://example.com/property/745,2026-02-01
+PropertyPro,S0746,2BR Townhouse in Kilimani,Kilimani,Townhouse,2,2,1140,27061589,cctv|gym|generator|balcony,https://example.com/property/746,2026-01-29
+PropertyPro,T0747,2BR Villa in Ongata Rongai,Ongata Rongai,Villa,2,2,1097,12065661,garden|internet|security,https://example.com/property/747,2026-02-16
+BuyRentKenya,U0748,4BR Bungalow in Buruburu,Buruburu,Bungalow,4,3,2884,9866976,generator|garden|security|internet,https://example.com/property/748,2026-02-04
+PropertyPro,V0749,5BR Villa in Donholm,Donholm,Villa,5,4,6006,14485356,,https://example.com/property/749,2026-01-30
+PropertyPro,W0750,4BR Apartment in Parklands,Parklands,Apartment,4,3,1926,38134253,,https://example.com/property/750,2026-01-22
+BuyRentKenya,X0751,3BR Bungalow in Runda,Runda,Bungalow,3,2,1851,138409961,gym|furnished,https://example.com/property/751,2026-02-18
+DiamondTrust,Y0752,4BR House in Syokimau,Syokimau,House,4,3,2260,7858740,,https://example.com/property/752,2026-01-26
+DiamondTrust,Z0753,2BR Villa in Kitengela,Kitengela,Villa,2,2,1205,12008200,,https://example.com/property/753,2026-02-17
+DiamondTrust,A0754,2BR Bungalow in Runda,Runda,Bungalow,2,1,1302,116028643,,https://example.com/property/754,2026-01-26
+PropertyPro,B0755,4BR Apartment in Donholm,Donholm,Apartment,4,3,1915,21553667,,https://example.com/property/755,2026-01-21
+DiamondTrust,C0756,2BR Apartment in Kitengela,Kitengela,Apartment,2,1,968,16196913,,https://example.com/property/756,2026-02-10
+DiamondTrust,D0757,2BR Villa in Kitengela,Kitengela,Villa,2,1,1248,16372874,,https://example.com/property/757,2026-02-16
+PropertyPro,E0758,1BR House in Kitengela,Kitengela,House,1,2,1087,4425019,parking|playground|cctv|furnished|lift,https://example.com/property/758,2026-02-04
+DiamondTrust,F0759,2BR Apartment in Lavington,Lavington,Apartment,2,1,861,47487836,,https://example.com/property/759,2026-02-16
+PropertyPro,G0760,3BR Townhouse in Kilimani,Kilimani,Townhouse,3,3,1765,46321056,lift|balcony|water|internet|parking,https://example.com/property/760,2026-02-10
+PropertyPro,H0761,3BR Bungalow in Kitengela,Kitengela,Bungalow,3,2,2475,15108110,furnished|water,https://example.com/property/761,2026-02-08
+PropertyPro,I0762,2BR Bungalow in Thika Road,Thika Road,Bungalow,2,1,1636,9263173,garden|water|security,https://example.com/property/762,2026-02-11
+DiamondTrust,J0763,3BR Townhouse in Komarock,Komarock,Townhouse,3,2,1754,4625302,cctv|internet|gym,https://example.com/property/763,2026-02-03
+DiamondTrust,K0764,3BR Bungalow in Runda,Runda,Bungalow,3,3,2572,175005156,balcony|generator,https://example.com/property/764,2026-02-02
+BuyRentKenya,L0765,2BR Bungalow in Syokimau,Syokimau,Bungalow,2,2,1743,11195125,playground|pool|gym|balcony,https://example.com/property/765,2026-01-26
+BuyRentKenya,M0766,4BR Townhouse in Runda,Runda,Townhouse,4,4,2045,49195875,cctv|pool|garden|water|lift,https://example.com/property/766,2026-01-27
+BuyRentKenya,N0767,4BR Apartment in Parklands,Parklands,Apartment,4,4,1431,41838331,,https://example.com/property/767,2026-01-20
+BuyRentKenya,O0768,3BR Villa in Kilimani,Kilimani,Villa,3,3,2723,44856103,generator|lift|balcony|gym|playground,https://example.com/property/768,2026-02-01
+DiamondTrust,P0769,2BR Townhouse in Karen,Karen,Townhouse,2,1,1065,74569320,,https://example.com/property/769,2026-02-15
+PropertyPro,Q0770,4BR Villa in Embakasi,Embakasi,Villa,4,3,3175,5730468,playground|generator|security|cctv|lift,https://example.com/property/770,2026-01-30
+BuyRentKenya,R0771,5BR Townhouse in Donholm,Donholm,Townhouse,5,5,1087,17066137,,https://example.com/property/771,2026-02-19
+BuyRentKenya,S0772,3BR Villa in Kilimani,Kilimani,Villa,3,2,3024,39826318,,https://example.com/property/772,2026-02-13
+DiamondTrust,T0773,4BR Apartment in Kasarani,Kasarani,Apartment,4,4,1356,12164896,,https://example.com/property/773,2026-01-23
+PropertyPro,U0774,3BR Bungalow in Karen,Karen,Bungalow,3,3,2443,116375226,water|playground|balcony|gym,https://example.com/property/774,2026-02-17
+PropertyPro,V0775,4BR Villa in Ngong,Ngong,Villa,4,4,3993,12502447,lift|water|internet,https://example.com/property/775,2026-02-11
+PropertyPro,W0776,3BR Apartment in Ongata Rongai,Ongata Rongai,Apartment,3,2,1162,14997543,gym|garden|cctv|security|lift,https://example.com/property/776,2026-02-11
+DiamondTrust,X0777,4BR Bungalow in Embakasi,Embakasi,Bungalow,4,4,3702,7203626,,https://example.com/property/777,2026-01-20
+DiamondTrust,Y0778,1BR Apartment in Kilimani,Kilimani,Apartment,1,2,505,20926390,,https://example.com/property/778,2026-02-10
+BuyRentKenya,Z0779,3BR Villa in Langata,Langata,Villa,3,2,2335,21303003,furnished|garden|security,https://example.com/property/779,2026-01-20
+DiamondTrust,A0780,4BR Bungalow in Kasarani,Kasarani,Bungalow,4,3,3509,11543535,,https://example.com/property/780,2026-01-25
+PropertyPro,B0781,4BR Villa in Thika Road,Thika Road,Villa,4,4,4499,10392468,lift|pool|parking|playground|furnished,https://example.com/property/781,2026-02-15
+PropertyPro,C0782,2BR Townhouse in Donholm,Donholm,Townhouse,2,1,1173,11078191,,https://example.com/property/782,2026-02-05
+BuyRentKenya,D0783,3BR House in Komarock,Komarock,House,3,3,2195,5368768,,https://example.com/property/783,2026-01-27
+PropertyPro,E0784,3BR Bungalow in Kileleshwa,Kileleshwa,Bungalow,3,3,2551,16944634,,https://example.com/property/784,2026-02-17
+PropertyPro,F0785,4BR Townhouse in Runda,Runda,Townhouse,4,3,2002,48144204,cctv|furnished|garden|security|water,https://example.com/property/785,2026-02-19
+PropertyPro,G0786,3BR House in Upper Hill,Upper Hill,House,3,2,1819,55673229,,https://example.com/property/786,2026-02-19
+BuyRentKenya,H0787,4BR Villa in Kitengela,Kitengela,Villa,4,3,3853,25888612,cctv|balcony|water|playground|generator,https://example.com/property/787,2026-02-10
+DiamondTrust,I0788,2BR Apartment in Upper Hill,Upper Hill,Apartment,2,1,914,37625647,,https://example.com/property/788,2026-02-06
+BuyRentKenya,J0789,2BR Townhouse in Langata,Langata,Townhouse,2,1,1259,16747271,parking|pool,https://example.com/property/789,2026-01-31
+DiamondTrust,K0790,2BR Apartment in Kileleshwa,Kileleshwa,Apartment,2,2,979,23019891,,https://example.com/property/790,2026-02-02
+PropertyPro,L0791,3BR Villa in Karen,Karen,Villa,3,2,3003,131936917,,https://example.com/property/791,2026-02-02
+DiamondTrust,M0792,3BR Villa in Thika Road,Thika Road,Villa,3,3,2594,6285568,garden|gym|generator,https://example.com/property/792,2026-01-27
+PropertyPro,N0793,1BR House in Syokimau,Syokimau,House,1,1,882,9569571,,https://example.com/property/793,2026-02-02
+DiamondTrust,O0794,3BR Apartment in Kilimani,Kilimani,Apartment,3,3,1291,34851559,playground|security|garden|pool|cctv,https://example.com/property/794,2026-02-01
+BuyRentKenya,P0795,2BR Bungalow in Parklands,Parklands,Bungalow,2,2,1872,29950808,,https://example.com/property/795,2026-01-22
+PropertyPro,Q0796,1BR Townhouse in Kitengela,Kitengela,Townhouse,1,1,893,4000000,,https://example.com/property/796,2026-02-10
+DiamondTrust,R0797,3BR House in Donholm,Donholm,House,3,3,2077,4792551,,https://example.com/property/797,2026-02-18
+BuyRentKenya,S0798,2BR House in Langata,Langata,House,2,1,1259,8000000,cctv|pool,https://example.com/property/798,2026-01-29
+BuyRentKenya,T0799,2BR Villa in Kasarani,Kasarani,Villa,2,2,957,9607154,balcony|gym,https://example.com/property/799,2026-01-24

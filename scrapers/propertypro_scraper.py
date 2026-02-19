@@ -24,6 +24,25 @@ class PropertyProScraper(SeleniumBaseScraper):
     def get_page_url(self, page):
         return f"{self.base_url}/properties-for-sale?page={page}"
     
+    def get_listing_elements(self, soup):
+        """Get PropertyPro listing elements"""
+        # PropertyPro uses specific listing classes
+        elements = soup.find_all(['div', 'article'], class_=lambda x: x and any(
+            cls in x.lower() for cls in ['property', 'listing', 'card', 'item', 'result']
+        ))
+        if not elements:
+            elements = soup.find_all(['div', 'li'], attrs={'data-property-id': True})
+        if not elements:
+            # Fallback
+            elements = []
+            for div in soup.find_all('div'):
+                text = div.get_text()
+                if 'KSh' in text and ('bed' in text.lower() or 'bath' in text.lower()):
+                    elements.append(div)
+                if len(elements) >= 30:
+                    break
+        return elements[:30]
+    
     def parse_listing(self, element):
         """Parse a listing from HTML element"""
         try:
@@ -47,9 +66,24 @@ class PropertyProScraper(SeleniumBaseScraper):
             
             container_text = container.get_text(separator=" ", strip=True) if hasattr(container, 'get_text') else str(container)
             
-            # Extract price
-            price = clean_price(container_text)
-            if not price:
+            # Skip rental listings (looking for "for sale" only)
+            if re.search(r'\bto let\b|\brent\b|\bleased\b', container_text, re.IGNORECASE):
+                return None
+            
+            # Extract price - FIRST occurrence only
+            price_match = re.search(r'KSh\s*([\d,]+(?:\.?\d+)?)\s*(?:M|K|Bn)?', container_text, re.IGNORECASE)
+            if not price_match:
+                price_match = re.search(r'([\d,]+(?:\.?\d+)?)\s*(?:M|K)?', container_text)
+            if not price_match:
+                return None
+            
+            try:
+                price_str = price_match.group(1)
+                price = int(float(price_str.replace(',', '')))
+                # Sanity check - reasonable house prices in Nairobi (sale prices)
+                if price < 500000 or price > 2000000000:
+                    return None
+            except:
                 return None
             
             # Extract PID
@@ -80,13 +114,13 @@ class PropertyProScraper(SeleniumBaseScraper):
                         break
             
             # Extract bedrooms
-            bedrooms = 0
+            bedrooms = None
             bed_match = re.search(r'(\d+)\s*(?:Beds?|Bedrooms?|Bed)', container_text, re.IGNORECASE)
             if bed_match:
                 bedrooms = int(bed_match.group(1))
             
             # Extract bathrooms
-            bathrooms = 0
+            bathrooms = None
             bath_match = re.search(r'(\d+)\s*(?:Baths?|Bathrooms?|Bath)', container_text, re.IGNORECASE)
             if bath_match:
                 bathrooms = int(bath_match.group(1))
@@ -138,8 +172,8 @@ class PropertyProScraper(SeleniumBaseScraper):
                 'title': title[:200] if title else "Property",
                 'location': location,
                 'property_type': property_type,
-                'bedrooms': bedrooms if bedrooms > 0 else None,
-                'bathrooms': bathrooms if bathrooms > 0 else None,
+                'bedrooms': bedrooms if bedrooms and bedrooms > 0 else None,
+                'bathrooms': bathrooms if bathrooms and bathrooms > 0 else None,
                 'size_sqft': size_sqft,
                 'price_kes': price,
                 'amenities': '|'.join(amenities) if amenities else None,

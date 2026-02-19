@@ -24,6 +24,25 @@ class BuyRentKenyaScraper(SeleniumBaseScraper):
     def get_page_url(self, page):
         return f"{self.base_url}/search?category=for-sale&location=nairobi&page={page}"
     
+    def get_listing_elements(self, soup):
+        """Get BuyRentKenya listing elements"""
+        # BuyRentKenya uses specific listing classes
+        elements = soup.find_all(['div', 'article'], class_=lambda x: x and any(
+            cls in x.lower() for cls in ['property', 'listing', 'card', 'item', 'result', 'listing-card']
+        ))
+        if not elements:
+            elements = soup.find_all('article')
+        if not elements:
+            # Fallback: find divs with listing content
+            elements = []
+            for div in soup.find_all('div'):
+                text = div.get_text()
+                if 'KSh' in text and ('bed' in text.lower() or 'bath' in text.lower()):
+                    elements.append(div)
+                if len(elements) >= 30:
+                    break
+        return elements[:30]
+    
     def parse_listing(self, element):
         """Parse a listing from HTML element"""
         try:
@@ -47,9 +66,24 @@ class BuyRentKenyaScraper(SeleniumBaseScraper):
             
             container_text = container.get_text(separator=" ", strip=True) if hasattr(container, 'get_text') else str(container)
             
-            # Extract price
-            price = clean_price(container_text)
-            if not price:
+            # Skip rental listings
+            if re.search(r'\bto let\b|\brent\b', container_text, re.IGNORECASE):
+                return None
+            
+            # Extract price - FIRST occurrence only
+            price_match = re.search(r'KSh\s*([\d,]+(?:\.?\d+)?)\s*(?:M|K|Bn)?', container_text, re.IGNORECASE)
+            if not price_match:
+                price_match = re.search(r'([\d,]+(?:\.?\d+)?)\s*(?:M|K)?', container_text)
+            if not price_match:
+                return None
+            
+            try:
+                price_str = price_match.group(1)
+                price = int(float(price_str.replace(',', '')))
+                # Sanity check - reasonable house prices in Nairobi (sale prices)
+                if price < 500000 or price > 2000000000:
+                    return None
+            except:
                 return None
             
             # Extract title

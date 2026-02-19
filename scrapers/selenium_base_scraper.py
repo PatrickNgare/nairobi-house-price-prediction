@@ -227,6 +227,21 @@ class SeleniumBaseScraper:
             self.logger.error(f"Error scrolling page: {str(e)}")
             return False
     
+    def get_listing_elements(self, soup):
+        """Get listing container elements - can be overridden by subclasses"""
+        # Default: find all divs and articles that might be listings
+        elements = soup.find_all(['div', 'article', 'li'], class_=lambda x: x and ('property' in x.lower() or 'listing' in x.lower() or 'card' in x.lower()))
+        if not elements:
+            # Fallback: find all divs with price indicators
+            elements = []
+            for div in soup.find_all('div'):
+                text = div.get_text()
+                if 'KSh' in text or 'KES' in text or '₹' in text:
+                    elements.append(div)
+                if len(elements) >= 50:  # Limit to avoid too many
+                    break
+        return elements[:50]  # Limit to 50 listings per page
+    
     def parse_listing(self, html_element):
         """Parse individual listing - to be implemented by child classes"""
         raise NotImplementedError("parse_listing must be implemented by subclass")
@@ -243,21 +258,20 @@ class SeleniumBaseScraper:
         page_listings = []
         
         try:
-            # Find listing elements
-            if listings_selector:
-                elements = soup.select(listings_selector)
-            else:
-                # Fallback to finding all divs with price
-                elements = soup.find_all(string=lambda t: t and 'KSh' in str(t))
+            # Find listing elements using site-specific selectors
+            elements = self.get_listing_elements(soup)
             
             self.logger.info(f"Found {len(elements)} potential listing elements")
             
             for element in elements:
                 try:
-                    listing = self.parse_listing(element)
+                    # Convert element to HTML string for parsing
+                    element_html = str(element)
+                    listing = self.parse_listing(element_html)
                     if listing:
                         page_listings.append(listing)
                 except Exception as e:
+                    self.logger.debug(f"Parse error: {e}")
                     continue
             
             self.stats['pages_scraped'] += 1
